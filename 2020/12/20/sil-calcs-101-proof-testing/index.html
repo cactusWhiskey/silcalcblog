@@ -1,4 +1,33 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><link media="all" href="https://www.silcalcblog.com/wp-content/cache/autoptimize/css/autoptimize_ef25c24134d669e3e8141e7770136a3b.css" rel="stylesheet" /><title>SIL Calcs 101: Proof Testing - SilCalcBlog</title><meta name="description" content="Proof testing is essential to most safety integrity level calculations, this post is going to focus on the nuts and bolts of modeling proof testing." /><link rel="canonical" href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="SIL Calcs 101: Proof Testing - SilCalcBlog" /><meta property="og:description" content="Proof testing is essential to most safety integrity level calculations, this post is going to focus on the nuts and bolts of modeling proof testing." /><meta property="og:url" content="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" /><meta property="og:site_name" content="SilCalcBlog" /><meta property="article:published_time" content="2020-12-20T17:51:21+00:00" /><meta property="article:modified_time" content="2021-03-15T00:57:33+00:00" /><meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" /><meta property="og:image:width" content="656" /><meta property="og:image:height" content="300" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Ricardo Rivero"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="18 minutes"> <script type="application/ld+json" class="yoast-schema-graph">{
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>SIL Calcs 101: Proof Testing - SilCalcBlog</title>
+	<meta name="description" content="Proof testing is essential to most safety integrity level calculations, this post is going to focus on the nuts and bolts of modeling proof testing." />
+	<link rel="canonical" href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="SIL Calcs 101: Proof Testing - SilCalcBlog" />
+	<meta property="og:description" content="Proof testing is essential to most safety integrity level calculations, this post is going to focus on the nuts and bolts of modeling proof testing." />
+	<meta property="og:url" content="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" />
+	<meta property="og:site_name" content="SilCalcBlog" />
+	<meta property="article:published_time" content="2020-12-20T17:51:21+00:00" />
+	<meta property="article:modified_time" content="2021-03-15T00:57:33+00:00" />
+	<meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" />
+	<meta property="og:image:width" content="656" />
+	<meta property="og:image:height" content="300" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Ricardo Rivero">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{
 	    "@context": "https://schema.org",
 	    "@graph": [
 	        {
@@ -109,7 +138,6 @@
 	            "mainEntityOfPage": {
 	                "@id": "https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/#webpage"
 	            },
-	            "commentCount": 2,
 	            "publisher": {
 	                "@id": "https://www.silcalcblog.com/#/schema/person/dc08a5e0006475eb3bbf4d3189fb41ce"
 	            },
@@ -126,7 +154,627 @@
 	            "name": "Ricardo Rivero"
 	        }
 	    ]
-	}</script> <link rel='dns-prefetch' href='//localhost' /><link rel='dns-prefetch' href='//fonts.googleapis.com' /><link rel='dns-prefetch' href='//s.w.org' /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; SIL Calcs 101: Proof Testing Comments Feed" href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/feed/" /><link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' /> <script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script> <link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/225" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" /><meta name="generator" content="WordPress 5.7" /><link rel='shortlink' href='https://www.silcalcblog.com/?p=225' /><link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2020%2F12%2F20%2Fsil-calcs-101-proof-testing%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2020%2F12%2F20%2Fsil-calcs-101-proof-testing%2F&#038;format=xml" /> <script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script> </head><body class="post-template-default single single-post postid-225 single-format-standard wp-embed-responsive no-sidebar"><div id="page" class="hfeed site"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a><header id="masthead" class="site-header" role="banner"><div class="site-branding"><p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p><p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p></div><nav id="site-navigation" class="main-navigation" role="navigation"> <button class="menu-toggle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg> Menu </button><div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li><li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li><li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li></ul></div></nav></header><div id="content" class="site-content"><div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article id="post-225" class="post-225 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-integrity-level-calculation category-sil-calc-101 tag-proof-testing tag-safety-instrumented-system tag-safety-integrity-level"><header class="entry-header"><h1 class="entry-title">SIL Calcs 101: Proof Testing</h1><div class="entry-thumbnail"> <img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></div><div class="entry-meta"> <span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="bookmark"><time class="entry-date published" datetime="2020-12-20T11:51:21+00:00">December 20, 2020</time><time class="updated" datetime="2021-03-15T00:57:33+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span></div></header><div class="entry-content"><p>Time to complicate our lives a bit! Proof testing is essential to most safety integrity level calculations, and while the details of how to calculate proof test coverages, or how to execute good proof tests, are worthwhile topics, this post is going to focus on the nuts and bolts of modeling proof testing.</p> <span id="more-225"></span><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>Proof Test Example</h2><p>The best way to do this is to just dive straight into an example. It&#8217;s worth noting that we are going to do this the long way the first time through, after which we will generalize and also automate the method a bit.</p><p> Look at the first graph below, it shows the evolution of a <a href="https://silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/">single element system</a> with no proof testing. Assume that the system has some lambda value, it doesn&#8217;t much matter what it is for right now.</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2020/12/image001.png?w=656" class="wp-image-305 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2020/12/image001.png?w=656" alt="proof testing" class="wp-image-305"/></noscript></figure><p>Now check out the next graph, it still has the system above, but I have added a system that has 15% of the lambda of the original system. We&#8217;ll talk more about what this means later, but for now, consider it a useful reference when thinking about proof testing.</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-2.png?w=1024" class="wp-image-432 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-2.png?w=1024" alt="proof testing" class="wp-image-432"/></noscript></figure><p>The next graph shows the evolution of a proof tested system superimposed over the original non-proof tested system (with the 15% lambda system on the graph as a reference). The two superimposed systems (proof tested and not proof tested) have the same lambda. The proof test is done with 85% coverage, which we will talk about in just a minute.</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-1.png?w=1024" class="wp-image-431 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-1.png?w=1024" alt="proof testing" class="wp-image-431"/></noscript></figure><p>If you are unfamiliar with the notion of proof testing, those sudden vertical drops in PFD are where we are executing the proof tests. Testing is typically done at regular intervals; we go out to the field and stroke the valve, float the level switch, etc. The test either proves that the system is functional, or finds defects that need to be repaired.</p><p>Based on the completeness/rigor of the test, we take a certain amount of credit, e.g. we might take 85% credit for stroking a valve. What this says is that we are confident that, with the testing done, we&#8217;ve found 85% of the possible failures for that valve. This implies that 15% of the failures could not be found by our test, and so we drop the PFD of our system down so that it meets up with the PFD of a system with only 15% of the lambda value.</p><p>What&#8217;s really important to notice here is that the proof tested system is exactly the same as the untested system, up until the point of the first proof test. The two systems literally sit on top of each other in the graph. With that in mind, lets start modeling our proof tested system. We&#8217;ll stick with a 1oo1 system for now, go ahead and add a column to your <a href="https://docs.google.com/spreadsheets/d/1SqJResUO1NYUuvIac3PPjXDFfqtAoaUGrHxUln1ETXE/edit?usp=sharing">spreadsheet</a> for this model:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-3.png?w=1024" class="wp-image-435 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-3.png?w=1024" alt="proof testing spreadsheet" class="wp-image-435"/></noscript></figure><p>Notice that I just set the PFD (probability of failure on demand) equal to the basic, single level switch, case. Again, this is because, until we actually go out and do a proof test, the system is identical to the untested case. Also notice that I modeled down to time 2856 hours. We are going to do our proof tests at four month intervals: 30 days in a month x 24 hours in a day x 4 months = 2880 hours. So, hour 2856 is the day before the proof test! Basically, we&#8217;ve modeled up until the point where we execute the test, now we need to talk about what happens on the day of the proof test.</p><p>We go out and do the test, and either we prove that everything works, or we find issues and correct them. Assume that our proof test has 85% coverage, that means that we find 85% of the potential failures of our level switch. We model this by adjusting our probability of failure on demand down, specifically we drop the PFD down to the level of a system with 15% of the lambda:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-4.png?w=506" class="wp-image-437 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-4.png?w=506" alt="proof testing spreadsheet" class="wp-image-437"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-5.png?w=1024" class="wp-image-439 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-5.png?w=1024" alt="proof testing spreadsheet" class="wp-image-439"/></noscript></figure><p>Notice that I calculate the PFD on the day of the proof test by evaluating a system with 0.15*λ. Why is this justified? Well, we&#8217;ve found all of the failures—via our proof test—associated with 85% of the level switch&#8217;s lambda (i.e I went out and float tested the level switch, and on the basis of that test, I am confident that of all the possible ways the level switch could be failed, 85% of them can&#8217;t possibly be true) so, the failures that are left must correspond to the 15% of lambda we were unable to test. These failures grow unfettered since the moment the device is put into service, so on the day of the proof test, it&#8217;s reasonable to say that the PFD of the level switch, after testing, is simply the PFD associated with the 15% of failures we couldn&#8217;t find.</p><div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div><h3>After the Proof Test</h3><p>Great, we did a proof test, and even better, we modeled it! What now? The key question here is, how does the system evolve in time after we do the proof test. Well, it evolves the same as before, according to the <a href="https://silcalcblog.com/2020/11/22/sil-calcs-101-intro/">basic equation</a>, and governed by lambda. What, however, would you propose we input for time in our equation? Think about this for a minute, if we just carry on, plugging in the next day—hour 2904—what would our system look like? Let me graph that approach for you:</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2020/12/image-23.png?w=1024" class="wp-image-245 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2020/12/image-23.png?w=1024" alt="" class="wp-image-245"/></noscript></figure><p>This can&#8217;t be right. We went out and did a proof test, our PFD dropped for a second, and then shot right back up to where it was before. Remember that this is a model, not reality. Out in the field time moves ahead as normal, but we are modeling PFD using the equation</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div><p>This is a straightforward function of time: it maps values of PFD to unique values of time. So, if our PFD after the proof test is lower, then we can conclude that our time must be earlier!</p><p>What this is telling us is that after we proof test, our level switch is acting like a newer version of itself. This should strike you as reasonable, after all, we did just go out and prove that a bunch of failures didn&#8217;t exist. If this is confusing you, remember that we are speaking in terms of our model here. The level switch out in the field is four months old, but we&#8217;ve proved that our switch has a lower PFD than we originally anticipated, so mathematically speaking, it is behaving like a younger switch.</p><p>If this notion still doesn&#8217;t resonate with you, it&#8217;s alright. It&#8217;s just my intuitive way of understanding what is going on. It&#8217;s good enough if you just realize that the level switch&#8217;s PFD dropped, and so we need to compute the time that matches up with that lower PFD.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h3>Calculating Time from PFD</h3><p>How then, do we compute the time that goes with our lower PFD after proof testing? Take a look at the basic equation again:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div><p>All we need to do is solve this for time. Let&#8217;s just do it:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>e^{-\lambda t} = 1 - PFD</pre></div><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>-\lambda t = ln(1 - PFD)</pre></div><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>t = \frac{-ln(1 - PFD)}{\lambda}</pre></div><p>Start a new column in the spreadsheet, use it as a place to calculate our &#8220;equivalent time&#8221;. Use the formula above for the calculation:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-6.png?w=1024" class="wp-image-444 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-6.png?w=1024" alt="proof test spreadsheet" class="wp-image-444"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-7.png?w=380" class="wp-image-445 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-7.png?w=380" alt="proof test spreadsheet" class="wp-image-445"/></noscript></figure><p>I calculate that our proof tested PFD corresponds to a time of 432 hours. From here, continue stepping forward in time by 24 hour increments:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-8.png?w=293" class="wp-image-446 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-8.png?w=293" alt="proof test spreadsheet" class="wp-image-446"/></noscript></figure><p>Carry this forward until the day before the next proof test, which occurs at the eight month mark (5760 hours is eight months).</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-9.png?w=1024" class="wp-image-447 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-9.png?w=1024" alt="proof test spreadsheet" class="wp-image-447"/></noscript></figure><p>Now, as discussed above, we know the system evolves according to the basic equation between proof tests. Just remember that we need to model using the equivalent time:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-10.png?w=1024" class="wp-image-448 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-10.png?w=1024" alt="proof test spreadsheet" class="wp-image-448"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-11.png?w=368" class="wp-image-449 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-11.png?w=368" alt="proof test spreadsheet" class="wp-image-449"/></noscript></figure><p>As always, mind those dollar signs around your lambda! Model the PFD down to the day before the eight month proof test. Let&#8217;s check the graph to see how we are looking:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test model"  data-src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial.png?w=600" class="wp-image-451 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial.png?w=600" alt="proof test model" class="wp-image-451"/></noscript></figure><p>Looking good.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h3>Modeling the Remaining Tests</h3><p>At this point we just repeat the process again at the eight month mark, and at the twelve month mark. Once again, we drop PFD to meet up with the 15% lambda system. Then we calculate equivalent time, and we step forward in 24 hour increments from there. The PFD of the system gets modeled based on the equivalent time. Don&#8217;t forget to compute PFD average and RRF when you are done, the details are all in the <a href="https://docs.google.com/spreadsheets/d/1SqJResUO1NYUuvIac3PPjXDFfqtAoaUGrHxUln1ETXE/edit?usp=sharing">spreadsheet</a>. Let&#8217;s check the graph:</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial-see-blog.png?w=600" class="wp-image-457 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial-see-blog.png?w=600" alt="" class="wp-image-457"/></noscript></figure><p>Excellent stuff!</p><div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div><h2>Generalizing and Automating</h2><p>I don&#8217;t know about you, but I do not want to sit and go through that tedious process every time I want to model a proof test, change a proof test frequency, or change a proof test coverage. We need some automation here.</p><p>First, let&#8217;s define some parameters we need, namely the proof test coverage and frequency:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-12.png?w=1024" class="wp-image-460 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-12.png?w=1024" alt="proof test spreadsheet" class="wp-image-460"/></noscript></figure><p>Every time we go proof test our device (at whatever frequency) we know we are going to drop PFD down to the 15% lambda system. More generally, we drop down to a system with lambda = 1 &#8211; proof test coverage:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{ND} = (1-PTC)\lambda_{DU}</pre></div><p>Where λ<sub>ND</sub> stands for &#8220;lambda never detected&#8221;, λ<sub>DU</sub> is just our level switch&#8217;s original value of lambda, and PTC stands for &#8220;proof test coverage&#8221;.</p><p>Go ahead and compute λ<sub>ND</sub>, and while you are at it, compute lambda detected (via the proof test) as:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DD} = \lambda_{DU}*PTC</pre></div><p>Where λ<sub>DD</sub> is lambda detected.</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-13.png?w=523" class="wp-image-462 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-13.png?w=523" alt="" class="wp-image-462"/></noscript></figure><p id="lambdaND">Next, model the λ<sub>ND</sub> system over our entire timeframe, that way whenever we need to know what it&#8217;s value is, we have it handy:</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-14.png?w=1024" class="wp-image-464 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-14.png?w=1024" alt="" class="wp-image-464"/></noscript></figure><div style="height:39px" aria-hidden="true" class="wp-block-spacer"></div><h3>Building Some Logic</h3><p>Think through what we want to do: if it&#8217;s the day of a proof test (based on our proof test frequency), then we want the PFD of the system to fall to the λ<sub>ND</sub> system, otherwise, we want the system to evolve in time normally. How to tell if it&#8217;s the day of a proof test? Use the <a href="https://en.wikipedia.org/wiki/Modulo_operation">modulo</a> operation! The modulo operation returns the remainder of a division, for example: 5mod2 evaluates to 1, since the remainder when you divide 5 by 2 is 1. Similarly, 9mod3 evaluates to zero.</p><p> Consider a proof test frequency of 720 hours (1 month). Try working through a couple of examples (note these all have units of hours):</p><p>24mod720 = 24</p><p>48mod720 = 48</p><p>720mod720 = 0</p><p>744mod720 = 24</p><p>768mod720 = 48</p><p>1440mod720 = 0</p><p>1464mod720 = 24</p><p>The key insight here is that the modulo operation evaluates to 0 when the numbers cleanly divide; we can use this to our advantage: if the current time modulo proof test frequency = 0, then it&#8217;s time for a proof test! Otherwise, evolve normally in time.</p><figure class="wp-block-image size-large is-style-default"><img  alt="modulo operation proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-15.png?w=1024" class="wp-image-468 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-15.png?w=1024" alt="modulo operation proof testing" class="wp-image-468"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-16.png?w=557" class="wp-image-470 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-16.png?w=557" alt="" class="wp-image-470"/></noscript></figure><p>This is exactly what we wanted, if cell A10 (current time) modulo proof test frequency (notice I converted to hours by multiplying by 720 hours/month) equals zero, then we set the PFD equal to Q10 (which is the PFD of the never detected system). Otherwise, we compute PFD as normal. Notice that we still use cell C2 as the lambda, because the system evolves in time according to its overall failure rate, unless we are doing something to it, like proof testing it. Also note that instead of time (column A) I used equivalent time here (column P). More on that in a minute.</p><p>Fill this formula in all the way down, and now lets talk time.</p><div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div><h3>Equivalent Time, Automated</h3><p>Again, think through what it is we are trying to do: when it&#8217;s time for a proof test, we want to calculate the equivalent time via:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>t = \frac{-ln(1 - PFD)}{\lambda}</pre></div><p>When it&#8217;s not time for a proof test, we want to add 24 hours to whatever the previous time was. The modulo operation works quite well here, this is basically the same logic as we used for the PFD column.</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-17.png?w=1024" class="wp-image-474 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-17.png?w=1024" alt="" class="wp-image-474"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-18.png?w=409" class="wp-image-475 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-18.png?w=409" alt="" class="wp-image-475"/></noscript></figure><p>All we are doing here is checking if it&#8217;s proof test time (via modulo operation), if it is we calculate the equivalent time, else we add 24 hours to the previous time. Note that we need to enter 0 hours manually into the first cell (because there is nothing above it to add 24 hours to):</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-19.png?w=1024" class="wp-image-477 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-19.png?w=1024" alt="" class="wp-image-477"/></noscript></figure><p>That&#8217;s all there is to it, with this simple logic the proof testing calculations are automated, all you need to do is adjust your frequency and coverage as desired. Note that since our timestep here is 24 hours, using a proof test frequency that isn&#8217;t an integer multiple of 24 will likely produce unexpected results.</p><div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div><h2>Lambda Splitting</h2><p>Formal contexts, such as a textbook, won&#8217;t use the method we&#8217;ve outlined above. Instead, you will see an entirely equivalent method, based around the idea of splitting lambda up into two pieces. We have already seen both of these pieces, they are λ <sub>ND</sub> and λ <sub>DD</sub>, which we computed above. Last time we didn&#8217;t do much of anything with λ<sub>DD</sub>, but this time  it will play a central role.</p><p>The approach of the lambda splitting method is to model each piece of lambda as it&#8217;s own system, and then to join them. The lambda never detected system is easy to model, in fact, we&#8217;ve already done it <a href="#lambdaND">above</a>. The lambda detected system requires an extra second of thought; what we want to do here is model a system that evolves in time normally, until there is a proof test, at which point <em>all</em> of the failures are found. Why? Because the lambda detected system is the set of all failures which are detected by our (imperfect) proof test. Basically, we need to model the lambda detected system with 100% proof test coverage, which we already know how to do, so let&#8217;s get to it.</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-20.png?w=1024" class="wp-image-484 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-20.png?w=1024" alt="" class="wp-image-484"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-21.png?w=468" class="wp-image-485 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-21.png?w=468" alt="" class="wp-image-485"/></noscript></figure><p>Notice that there is no &#8220;if&#8221; statement this time, instead we are leveraging a convenient property of the modulo operation: since the modulo operation returns the remainder of division, it&#8217;s value oscillates between zero, and the divisor. This is easier to see by example, assume a 1 month (720 hours) proof test frequency:</p><p>0mod720 = 0</p><p>24mod720 = 24</p><p>48mod720 = 48</p><p>72mod720 = 72</p><p>&#8230;.</p><p>696mod720 = 696</p><p>720mod720 = 0</p><p>744mod720 = 24</p><p>So the modulo expression in our formula bar produces a time which cycles between 0 and 696 (one day before a proof test). Whenever it gets to a time that divides evenly by 720, it conveniently circles back around to 0. Since the PFD at time 0 hours is equal to 0, we don&#8217;t even need to do any additional work to incorporate our proof test (because a 100% proof test resets PFD to 0).</p><h3>Joining the Systems</h3><p>After both the lambda detected and lambda never detected systems are modeled over the entire mission time (1 yr in our case), all that remains is to combine them. Let&#8217;s think through this, do we want to take the intersection of the two systems, or the union?</p><p>Well, taking the intersection would imply that we want to know when there is a failure in the lambda never detected system (i.e a failure that we don&#8217;t ever find, until we place a demand on the system and it doesn&#8217;t work) <em>and</em> there is simultaneously a failure in the lambda detected system (i.e a failure that remains undetected, and will cause our system to not function, until we proof test, at which point we find it and fix it). This isn&#8217;t quite right, we don&#8217;t need two failures for our system to fail, after all both systems represent the same physical level switch!</p><p>A better idea is to take the union of the two systems, this represents the probability that we get either a failure in the never detected system, or a failure in the detected system. If this confuses you, remember that a failure in the lambda detected system still counts as a hidden failure, which will cause our system to not work when a demand is made of it. It&#8217;s just that these hidden failures eventually get found and reset to zero at the proof test.</p><p>Calculate the union of the two systems based on our familiar formula for unions of two independent events (i.e 2oo2 system). Note that I said independent, we are making an assumption that there is no dependency between the detected and never detected failures:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_A+P_B-P_AP_B</pre></div><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-24.png?w=1024" class="wp-image-491 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-24.png?w=1024" alt="" class="wp-image-491"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-25.png?w=324" class="wp-image-492 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-25.png?w=324" alt="" class="wp-image-492"/></noscript></figure><p>Notice that you get the exact same answer as the method we used above, which I find more intuitive.</p><div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div><p>Next time, we are going to discuss <a href="https://silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/">dependent systems</a>, and common cause failure. Should be a great time.</p></div><footer class="entry-footer"> <span class="cat-links"> Posted in <a href="https://www.silcalcblog.com/category/safety-integrity-level-calculation/" rel="category tag">Safety Integrity Level Calculation</a>, <a href="https://www.silcalcblog.com/category/sil-calc-101/" rel="category tag">SIL Calc 101</a> </span> <span class="tags-links"> <a href="https://www.silcalcblog.com/tag/proof-testing/" rel="tag">proof testing</a><a href="https://www.silcalcblog.com/tag/safety-instrumented-system/" rel="tag">Safety Instrumented System</a><a href="https://www.silcalcblog.com/tag/safety-integrity-level/" rel="tag">safety integrity level</a> </span></footer><div class="entry-author"><div class="author-avatar"></div><div class="author-heading"><h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2></div><p class="author-bio"> <a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author"> View all posts by Ricardo Rivero </a></p></div></article><nav class="navigation post-navigation" role="navigation" aria-label="Posts"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Multiple Elements</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="next"><span class="meta-nav">Next &rsaquo;</span>SIL Calcs 101: Beta Factor Intro</a></div></div></nav><div id="comments" class="comments-area"><h2 class="comments-title"> 2 thoughts on &ldquo;<span>SIL Calcs 101: Proof Testing</span>&rdquo;</h2><ol class="comment-list"><li id="comment-15" class="pingback even thread-even depth-1"><div class="comment-body"> Pingback: <a href='http://silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/' rel='external nofollow ugc' class='url'>SIL Calcs 101: Multiple Elements &#8211; SilCalcBlog</a></div></li><li id="comment-16" class="pingback odd alt thread-odd thread-alt depth-1"><div class="comment-body"> Pingback: <a href='http://silcalcblog.com/2021/03/03/proof-test-coverage-calculations/' rel='external nofollow ugc' class='url'>Proof Test Coverage Calculations &#8211; SilCalcBlog</a></div></li></ol><p class="no-comments">Comments are closed.</p></div></main></div></div><footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info-wrapper clear"><div class="site-info"> <a href="http://wordpress.org/">Proudly powered by WordPress</a> <span class="sep"> ~ </span> Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.</div></div></footer></div> <script>document.addEventListener("DOMContentLoaded", function() {
+	}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//localhost' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.silcalcblog.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-reset-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/reset.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-block-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/blocks.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-192253365-1' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-192253365-1", {"anonymize_ip":true});
+</script>
+<link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/225" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 5.7" />
+<link rel='shortlink' href='https://www.silcalcblog.com/?p=225' />
+<link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2020%2F12%2F20%2Fsil-calcs-101-proof-testing%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2020%2F12%2F20%2Fsil-calcs-101-proof-testing%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.28.0" />		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="google-site-verification" content="gn9RsKsUPIOuqUTFouwEwGftyFf1280AmGUGhaQd7do" /></head>
+
+<body class="post-template-default single single-post postid-225 single-format-standard wp-embed-responsive no-sidebar">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+							<p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p>
+							<p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p>
+					</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg>
+				Menu			</button>
+			<div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li>
+<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-225" class="post-225 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-integrity-level-calculation category-sil-calc-101 tag-proof-testing tag-safety-instrumented-system tag-safety-integrity-level">
+	<header class="entry-header">
+		<h1 class="entry-title">SIL Calcs 101: Proof Testing</h1>					<div class="entry-thumbnail">
+				<img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript>			</div>
+		
+		<div class="entry-meta">
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="bookmark"><time class="entry-date published" datetime="2020-12-20T11:51:21+00:00">December 20, 2020</time><time class="updated" datetime="2021-03-15T00:57:33+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>Time to complicate our lives a bit! Proof testing is essential to most safety integrity level calculations, and while the details of how to calculate proof test coverages, or how to execute good proof tests, are worthwhile topics, this post is going to focus on the nuts and bolts of modeling proof testing. </p>
+
+
+
+<span id="more-225"></span>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Proof Test Example</h2>
+
+
+
+<p>The best way to do this is to just dive straight into an example. It&#8217;s worth noting that we are going to do this the long way the first time through, after which we will generalize and also automate the method a bit.</p>
+
+
+
+<p> Look at the first graph below, it shows the evolution of a <a href="https://silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/">single element system</a> with no proof testing. Assume that the system has some lambda value, it doesn&#8217;t much matter what it is for right now. </p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2020/12/image001.png?w=656" class="wp-image-305 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2020/12/image001.png?w=656" alt="proof testing" class="wp-image-305"/></noscript></figure>
+
+
+
+<p>Now check out the next graph, it still has the system above, but I have added a system that has 15% of the lambda of the original system. We&#8217;ll talk more about what this means later, but for now, consider it a useful reference when thinking about proof testing.</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-2.png?w=1024" class="wp-image-432 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-2.png?w=1024" alt="proof testing" class="wp-image-432"/></noscript></figure>
+
+
+
+<p>The next graph shows the evolution of a proof tested system superimposed over the original non-proof tested system (with the 15% lambda system on the graph as a reference). The two superimposed systems (proof tested and not proof tested) have the same lambda. The proof test is done with 85% coverage, which we will talk about in just a minute. </p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-1.png?w=1024" class="wp-image-431 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-1.png?w=1024" alt="proof testing" class="wp-image-431"/></noscript></figure>
+
+
+
+<p>If you are unfamiliar with the notion of proof testing, those sudden vertical drops in PFD are where we are executing the proof tests. Testing is typically done at regular intervals; we go out to the field and stroke the valve, float the level switch, etc. The test either proves that the system is functional, or finds defects that need to be repaired. </p>
+
+
+
+<p>Based on the completeness/rigor of the test, we take a certain amount of credit, e.g. we might take 85% credit for stroking a valve. What this says is that we are confident that, with the testing done, we&#8217;ve found 85% of the possible failures for that valve. This implies that 15% of the failures could not be found by our test, and so we drop the PFD of our system down so that it meets up with the PFD of a system with only 15% of the lambda value.</p>
+
+
+
+<p>What&#8217;s really important to notice here is that the proof tested system is exactly the same as the untested system, up until the point of the first proof test. The two systems literally sit on top of each other in the graph. With that in mind, lets start modeling our proof tested system. We&#8217;ll stick with a 1oo1 system for now, go ahead and add a column to your <a href="https://docs.google.com/spreadsheets/d/1SqJResUO1NYUuvIac3PPjXDFfqtAoaUGrHxUln1ETXE/edit?usp=sharing">spreadsheet</a> for this model:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-3.png?w=1024" class="wp-image-435 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-3.png?w=1024" alt="proof testing spreadsheet" class="wp-image-435"/></noscript></figure>
+
+
+
+<p>Notice that I just set the PFD (probability of failure on demand) equal to the basic, single level switch, case. Again, this is because, until we actually go out and do a proof test, the system is identical to the untested case. Also notice that I modeled down to time 2856 hours. We are going to do our proof tests at four month intervals: 30 days in a month x 24 hours in a day x 4 months = 2880 hours. So, hour 2856 is the day before the proof test! Basically, we&#8217;ve modeled up until the point where we execute the test, now we need to talk about what happens on the day of the proof test. </p>
+
+
+
+<p>We go out and do the test, and either we prove that everything works, or we find issues and correct them. Assume that our proof test has 85% coverage, that means that we find 85% of the potential failures of our level switch. We model this by adjusting our probability of failure on demand down, specifically we drop the PFD down to the level of a system with 15% of the lambda:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-4.png?w=506" class="wp-image-437 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-4.png?w=506" alt="proof testing spreadsheet" class="wp-image-437"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof testing spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-5.png?w=1024" class="wp-image-439 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-5.png?w=1024" alt="proof testing spreadsheet" class="wp-image-439"/></noscript></figure>
+
+
+
+<p>Notice that I calculate the PFD on the day of the proof test by evaluating a system with 0.15*λ. Why is this justified? Well, we&#8217;ve found all of the failures—via our proof test—associated with 85% of the level switch&#8217;s lambda (i.e I went out and float tested the level switch, and on the basis of that test, I am confident that of all the possible ways the level switch could be failed, 85% of them can&#8217;t possibly be true) so, the failures that are left must correspond to the 15% of lambda we were unable to test. These failures grow unfettered since the moment the device is put into service, so on the day of the proof test, it&#8217;s reasonable to say that the PFD of the level switch, after testing, is simply the PFD associated with the 15% of failures we couldn&#8217;t find. </p>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3>After the Proof Test</h3>
+
+
+
+<p>Great, we did a proof test, and even better, we modeled it! What now? The key question here is, how does the system evolve in time after we do the proof test. Well, it evolves the same as before, according to the <a href="https://silcalcblog.com/2020/11/22/sil-calcs-101-intro/">basic equation</a>, and governed by lambda. What, however, would you propose we input for time in our equation? Think about this for a minute, if we just carry on, plugging in the next day—hour 2904—what would our system look like? Let me graph that approach for you:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2020/12/image-23.png?w=1024" class="wp-image-245 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2020/12/image-23.png?w=1024" alt="" class="wp-image-245"/></noscript></figure>
+
+
+
+<p>This can&#8217;t be right. We went out and did a proof test, our PFD dropped for a second, and then shot right back up to where it was before. Remember that this is a model, not reality. Out in the field time moves ahead as normal, but we are modeling PFD using the equation</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div>
+
+
+
+<p>This is a straightforward function of time: it maps values of PFD to unique values of time. So, if our PFD after the proof test is lower, then we can conclude that our time must be earlier!</p>
+
+
+
+<p>What this is telling us is that after we proof test, our level switch is acting like a newer version of itself. This should strike you as reasonable, after all, we did just go out and prove that a bunch of failures didn&#8217;t exist. If this is confusing you, remember that we are speaking in terms of our model here. The level switch out in the field is four months old, but we&#8217;ve proved that our switch has a lower PFD than we originally anticipated, so mathematically speaking, it is behaving like a younger switch. </p>
+
+
+
+<p>If this notion still doesn&#8217;t resonate with you, it&#8217;s alright. It&#8217;s just my intuitive way of understanding what is going on. It&#8217;s good enough if you just realize that the level switch&#8217;s PFD dropped, and so we need to compute the time that matches up with that lower PFD. </p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3>Calculating Time from PFD</h3>
+
+
+
+<p>How then, do we compute the time that goes with our lower PFD after proof testing? Take a look at the basic equation again:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div>
+
+
+
+<p>All we need to do is solve this for time. Let&#8217;s just do it:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>e^{-\lambda t} = 1 - PFD</pre></div>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>-\lambda t = ln(1 - PFD)</pre></div>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>t = \frac{-ln(1 - PFD)}{\lambda}</pre></div>
+
+
+
+<p>Start a new column in the spreadsheet, use it as a place to calculate our &#8220;equivalent time&#8221;. Use the formula above for the calculation:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-6.png?w=1024" class="wp-image-444 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-6.png?w=1024" alt="proof test spreadsheet" class="wp-image-444"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-7.png?w=380" class="wp-image-445 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-7.png?w=380" alt="proof test spreadsheet" class="wp-image-445"/></noscript></figure>
+
+
+
+<p>I calculate that our proof tested PFD corresponds to a time of 432 hours. From here, continue stepping forward in time by 24 hour increments:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-8.png?w=293" class="wp-image-446 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-8.png?w=293" alt="proof test spreadsheet" class="wp-image-446"/></noscript></figure>
+
+
+
+<p>Carry this forward until the day before the next proof test, which occurs at the eight month mark (5760 hours is eight months).</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-9.png?w=1024" class="wp-image-447 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-9.png?w=1024" alt="proof test spreadsheet" class="wp-image-447"/></noscript></figure>
+
+
+
+<p>Now, as discussed above, we know the system evolves according to the basic equation between proof tests. Just remember that we need to model using the equivalent time:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-10.png?w=1024" class="wp-image-448 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-10.png?w=1024" alt="proof test spreadsheet" class="wp-image-448"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-11.png?w=368" class="wp-image-449 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-11.png?w=368" alt="proof test spreadsheet" class="wp-image-449"/></noscript></figure>
+
+
+
+<p>As always, mind those dollar signs around your lambda! Model the PFD down to the day before the eight month proof test. Let&#8217;s check the graph to see how we are looking:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test model"  data-src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial.png?w=600" class="wp-image-451 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial.png?w=600" alt="proof test model" class="wp-image-451"/></noscript></figure>
+
+
+
+<p>Looking good. </p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3>Modeling the Remaining Tests</h3>
+
+
+
+<p>At this point we just repeat the process again at the eight month mark, and at the twelve month mark. Once again, we drop PFD to meet up with the 15% lambda system. Then we calculate equivalent time, and we step forward in 24 hour increments from there. The PFD of the system gets modeled based on the equivalent time. Don&#8217;t forget to compute PFD average and RRF when you are done, the details are all in the <a href="https://docs.google.com/spreadsheets/d/1SqJResUO1NYUuvIac3PPjXDFfqtAoaUGrHxUln1ETXE/edit?usp=sharing">spreadsheet</a>. Let&#8217;s check the graph:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial-see-blog.png?w=600" class="wp-image-457 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/1oo1-proof-test-_tutorial-see-blog.png?w=600" alt="" class="wp-image-457"/></noscript></figure>
+
+
+
+<p>Excellent stuff! </p>
+
+
+
+<div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Generalizing and Automating</h2>
+
+
+
+<p>I don&#8217;t know about you, but I do not want to sit and go through that tedious process every time I want to model a proof test, change a proof test frequency, or change a proof test coverage. We need some automation here.</p>
+
+
+
+<p>First, let&#8217;s define some parameters we need, namely the proof test coverage and frequency:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-12.png?w=1024" class="wp-image-460 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-12.png?w=1024" alt="proof test spreadsheet" class="wp-image-460"/></noscript></figure>
+
+
+
+<p>Every time we go proof test our device (at whatever frequency) we know we are going to drop PFD down to the 15% lambda system. More generally, we drop down to a system with lambda = 1 &#8211; proof test coverage:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{ND} = (1-PTC)\lambda_{DU}</pre></div>
+
+
+
+<p>Where λ<sub>ND</sub> stands for &#8220;lambda never detected&#8221;, λ<sub>DU</sub> is just our level switch&#8217;s original value of lambda, and PTC stands for &#8220;proof test coverage&#8221;. </p>
+
+
+
+<p>Go ahead and compute λ<sub>ND</sub>, and while you are at it, compute lambda detected (via the proof test) as:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DD} = \lambda_{DU}*PTC</pre></div>
+
+
+
+<p>Where λ<sub>DD</sub> is lambda detected.</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-13.png?w=523" class="wp-image-462 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-13.png?w=523" alt="" class="wp-image-462"/></noscript></figure>
+
+
+
+<p id="lambdaND">Next, model the λ<sub>ND</sub> system over our entire timeframe, that way whenever we need to know what it&#8217;s value is, we have it handy:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-14.png?w=1024" class="wp-image-464 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-14.png?w=1024" alt="" class="wp-image-464"/></noscript></figure>
+
+
+
+<div style="height:39px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3>Building Some Logic</h3>
+
+
+
+<p>Think through what we want to do: if it&#8217;s the day of a proof test (based on our proof test frequency), then we want the PFD of the system to fall to the λ<sub>ND</sub> system, otherwise, we want the system to evolve in time normally. How to tell if it&#8217;s the day of a proof test? Use the <a href="https://en.wikipedia.org/wiki/Modulo_operation">modulo</a> operation! The modulo operation returns the remainder of a division, for example: 5mod2 evaluates to 1, since the remainder when you divide 5 by 2 is 1. Similarly, 9mod3 evaluates to zero. </p>
+
+
+
+<p> Consider a proof test frequency of 720 hours (1 month). Try working through a couple of examples (note these all have units of hours):</p>
+
+
+
+<p>24mod720 = 24</p>
+
+
+
+<p>48mod720 = 48</p>
+
+
+
+<p>720mod720 = 0</p>
+
+
+
+<p>744mod720 = 24</p>
+
+
+
+<p>768mod720 = 48</p>
+
+
+
+<p>1440mod720 = 0</p>
+
+
+
+<p>1464mod720 = 24</p>
+
+
+
+<p>The key insight here is that the modulo operation evaluates to 0 when the numbers cleanly divide; we can use this to our advantage: if the current time modulo proof test frequency = 0, then it&#8217;s time for a proof test! Otherwise, evolve normally in time. </p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="modulo operation proof testing"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-15.png?w=1024" class="wp-image-468 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-15.png?w=1024" alt="modulo operation proof testing" class="wp-image-468"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-16.png?w=557" class="wp-image-470 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-16.png?w=557" alt="" class="wp-image-470"/></noscript></figure>
+
+
+
+<p>This is exactly what we wanted, if cell A10 (current time) modulo proof test frequency (notice I converted to hours by multiplying by 720 hours/month) equals zero, then we set the PFD equal to Q10 (which is the PFD of the never detected system). Otherwise, we compute PFD as normal. Notice that we still use cell C2 as the lambda, because the system evolves in time according to its overall failure rate, unless we are doing something to it, like proof testing it. Also note that instead of time (column A) I used equivalent time here (column P). More on that in a minute.</p>
+
+
+
+<p>Fill this formula in all the way down, and now lets talk time.</p>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3>Equivalent Time, Automated</h3>
+
+
+
+<p>Again, think through what it is we are trying to do: when it&#8217;s time for a proof test, we want to calculate the equivalent time via:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>t = \frac{-ln(1 - PFD)}{\lambda}</pre></div>
+
+
+
+<p>When it&#8217;s not time for a proof test, we want to add 24 hours to whatever the previous time was. The modulo operation works quite well here, this is basically the same logic as we used for the PFD column. </p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-17.png?w=1024" class="wp-image-474 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-17.png?w=1024" alt="" class="wp-image-474"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-18.png?w=409" class="wp-image-475 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-18.png?w=409" alt="" class="wp-image-475"/></noscript></figure>
+
+
+
+<p>All we are doing here is checking if it&#8217;s proof test time (via modulo operation), if it is we calculate the equivalent time, else we add 24 hours to the previous time. Note that we need to enter 0 hours manually into the first cell (because there is nothing above it to add 24 hours to):</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-19.png?w=1024" class="wp-image-477 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-19.png?w=1024" alt="" class="wp-image-477"/></noscript></figure>
+
+
+
+<p>That&#8217;s all there is to it, with this simple logic the proof testing calculations are automated, all you need to do is adjust your frequency and coverage as desired. Note that since our timestep here is 24 hours, using a proof test frequency that isn&#8217;t an integer multiple of 24 will likely produce unexpected results. </p>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Lambda Splitting </h2>
+
+
+
+<p>Formal contexts, such as a textbook, won&#8217;t use the method we&#8217;ve outlined above. Instead, you will see an entirely equivalent method, based around the idea of splitting lambda up into two pieces. We have already seen both of these pieces, they are λ <sub>ND</sub> and λ <sub>DD</sub>, which we computed above. Last time we didn&#8217;t do much of anything with λ<sub>DD</sub>, but this time  it will play a central role. </p>
+
+
+
+<p>The approach of the lambda splitting method is to model each piece of lambda as it&#8217;s own system, and then to join them. The lambda never detected system is easy to model, in fact, we&#8217;ve already done it <a href="#lambdaND">above</a>. The lambda detected system requires an extra second of thought; what we want to do here is model a system that evolves in time normally, until there is a proof test, at which point <em>all</em> of the failures are found. Why? Because the lambda detected system is the set of all failures which are detected by our (imperfect) proof test. Basically, we need to model the lambda detected system with 100% proof test coverage, which we already know how to do, so let&#8217;s get to it.</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-20.png?w=1024" class="wp-image-484 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-20.png?w=1024" alt="" class="wp-image-484"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-21.png?w=468" class="wp-image-485 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-21.png?w=468" alt="" class="wp-image-485"/></noscript></figure>
+
+
+
+<p>Notice that there is no &#8220;if&#8221; statement this time, instead we are leveraging a convenient property of the modulo operation: since the modulo operation returns the remainder of division, it&#8217;s value oscillates between zero, and the divisor. This is easier to see by example, assume a 1 month (720 hours) proof test frequency:</p>
+
+
+
+<p>0mod720 = 0</p>
+
+
+
+<p>24mod720 = 24</p>
+
+
+
+<p>48mod720 = 48</p>
+
+
+
+<p>72mod720 = 72</p>
+
+
+
+<p>&#8230;.</p>
+
+
+
+<p>696mod720 = 696</p>
+
+
+
+<p>720mod720 = 0</p>
+
+
+
+<p>744mod720 = 24</p>
+
+
+
+<p>So the modulo expression in our formula bar produces a time which cycles between 0 and 696 (one day before a proof test). Whenever it gets to a time that divides evenly by 720, it conveniently circles back around to 0. Since the PFD at time 0 hours is equal to 0, we don&#8217;t even need to do any additional work to incorporate our proof test (because a 100% proof test resets PFD to 0).</p>
+
+
+
+<h3>Joining the Systems</h3>
+
+
+
+<p>After both the lambda detected and lambda never detected systems are modeled over the entire mission time (1 yr in our case), all that remains is to combine them. Let&#8217;s think through this, do we want to take the intersection of the two systems, or the union? </p>
+
+
+
+<p>Well, taking the intersection would imply that we want to know when there is a failure in the lambda never detected system (i.e a failure that we don&#8217;t ever find, until we place a demand on the system and it doesn&#8217;t work) <em>and</em> there is simultaneously a failure in the lambda detected system (i.e a failure that remains undetected, and will cause our system to not function, until we proof test, at which point we find it and fix it). This isn&#8217;t quite right, we don&#8217;t need two failures for our system to fail, after all both systems represent the same physical level switch! </p>
+
+
+
+<p>A better idea is to take the union of the two systems, this represents the probability that we get either a failure in the never detected system, or a failure in the detected system. If this confuses you, remember that a failure in the lambda detected system still counts as a hidden failure, which will cause our system to not work when a demand is made of it. It&#8217;s just that these hidden failures eventually get found and reset to zero at the proof test.</p>
+
+
+
+<p>Calculate the union of the two systems based on our familiar formula for unions of two independent events (i.e 2oo2 system). Note that I said independent, we are making an assumption that there is no dependency between the detected and never detected failures:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_A+P_B-P_AP_B</pre></div>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-24.png?w=1024" class="wp-image-491 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-24.png?w=1024" alt="" class="wp-image-491"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-25.png?w=324" class="wp-image-492 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-25.png?w=324" alt="" class="wp-image-492"/></noscript></figure>
+
+
+
+<p>Notice that you get the exact same answer as the method we used above, which I find more intuitive.</p>
+
+
+
+<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Next time, we are going to discuss <a href="https://silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/">dependent systems</a>, and common cause failure. Should be a great time.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+				<span class="cat-links">
+			Posted in <a href="https://www.silcalcblog.com/category/safety-integrity-level-calculation/" rel="category tag">Safety Integrity Level Calculation</a>, <a href="https://www.silcalcblog.com/category/sil-calc-101/" rel="category tag">SIL Calc 101</a>		</span>
+							<span class="tags-links">
+				<a href="https://www.silcalcblog.com/tag/proof-testing/" rel="tag">proof testing</a><a href="https://www.silcalcblog.com/tag/safety-instrumented-system/" rel="tag">Safety Instrumented System</a><a href="https://www.silcalcblog.com/tag/safety-integrity-level/" rel="tag">safety integrity level</a>			</span>
+			</footer><!-- .entry-footer -->
+
+	
+<div class="entry-author">
+	<div class="author-avatar">
+			</div><!-- .author-avatar -->
+
+	<div class="author-heading">
+		<h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2>
+	</div><!-- .author-heading -->
+
+	<p class="author-bio">
+				<a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author">
+			View all posts by Ricardo Rivero		</a>
+	</p><!-- .author-bio -->
+</div><!-- .entry-auhtor -->
+</article><!-- #post-## -->
+
+			
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Multiple Elements</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="next"><span class="meta-nav">Next &rsaquo;</span>SIL Calcs 101: Beta Factor Intro</a></div></div>
+	</nav>
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info-wrapper clear">
+						<div class="site-info">
+				<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"> ~ </span>
+				Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.			</div><!-- .site-info -->
+		</div><!-- .site-info-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
                 const eles = document.querySelectorAll(".katex-eq");
                 for(let idx=0; idx < eles.length; idx++) {
                     const ele = eles[idx];
@@ -144,4 +792,14 @@
                         ele.textContent = n.message;
                     }
                 }
-            });</script> <script defer src="https://www.silcalcblog.com/wp-content/cache/autoptimize/js/autoptimize_337646344b585d910fff071754f20b17.js"></script></body></html>
+            });
+        </script>
+        <link rel='stylesheet' id='katex-css'  href='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.css?ver=5.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.3' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.js?ver=5.7' id='katex-js'></script>
+
+</body>
+</html>
