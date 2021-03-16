@@ -1,4 +1,33 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><link media="all" href="https://www.silcalcblog.com/wp-content/cache/autoptimize/css/autoptimize_ef25c24134d669e3e8141e7770136a3b.css" rel="stylesheet" /><title>SIL Calcs 101: Beta Factor Intro - SilCalcBlog</title><meta name="description" content="Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model." /><link rel="canonical" href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="SIL Calcs 101: Beta Factor Intro - SilCalcBlog" /><meta property="og:description" content="Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model." /><meta property="og:url" content="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" /><meta property="og:site_name" content="SilCalcBlog" /><meta property="article:published_time" content="2021-01-16T04:14:22+00:00" /><meta property="article:modified_time" content="2021-03-15T00:51:17+00:00" /><meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" /><meta property="og:image:width" content="656" /><meta property="og:image:height" content="300" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Ricardo Rivero"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="10 minutes"> <script type="application/ld+json" class="yoast-schema-graph">{
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.9.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>SIL Calcs 101: Beta Factor Intro - SilCalcBlog</title>
+	<meta name="description" content="Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model." />
+	<link rel="canonical" href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="SIL Calcs 101: Beta Factor Intro - SilCalcBlog" />
+	<meta property="og:description" content="Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model." />
+	<meta property="og:url" content="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" />
+	<meta property="og:site_name" content="SilCalcBlog" />
+	<meta property="article:published_time" content="2021-01-16T04:14:22+00:00" />
+	<meta property="article:modified_time" content="2021-03-15T00:51:17+00:00" />
+	<meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" />
+	<meta property="og:image:width" content="656" />
+	<meta property="og:image:height" content="300" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Ricardo Rivero">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="10 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{
 	    "@context": "https://schema.org",
 	    "@graph": [
 	        {
@@ -126,7 +155,385 @@
 	            "name": "Ricardo Rivero"
 	        }
 	    ]
-	}</script> <link rel='dns-prefetch' href='//localhost' /><link rel='dns-prefetch' href='//fonts.googleapis.com' /><link rel='dns-prefetch' href='//s.w.org' /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; SIL Calcs 101: Beta Factor Intro Comments Feed" href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/feed/" /><link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' /> <script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script> <link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/311" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" /><meta name="generator" content="WordPress 5.7" /><link rel='shortlink' href='https://www.silcalcblog.com/?p=311' /><link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F01%2F15%2Fsil-calcs-101-beta-factor-intro%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F01%2F15%2Fsil-calcs-101-beta-factor-intro%2F&#038;format=xml" /> <script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script> </head><body class="post-template-default single single-post postid-311 single-format-standard wp-embed-responsive no-sidebar"><div id="page" class="hfeed site"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a><header id="masthead" class="site-header" role="banner"><div class="site-branding"><p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p><p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p></div><nav id="site-navigation" class="main-navigation" role="navigation"> <button class="menu-toggle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg> Menu </button><div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li><li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li><li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li></ul></div></nav></header><div id="content" class="site-content"><div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article id="post-311" class="post-311 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-instrumented-system category-safety-integrity-level category-safety-integrity-level-calculation category-sil-calc-101 tag-beta tag-sil-calc"><header class="entry-header"><h1 class="entry-title">SIL Calcs 101: Beta Factor Intro</h1><div class="entry-thumbnail"> <img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></div><div class="entry-meta"> <span class="posted-on"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="bookmark"><time class="entry-date published" datetime="2021-01-15T22:14:22+00:00">January 15, 2021</time><time class="updated" datetime="2021-03-15T00:51:17+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span></div></header><div class="entry-content"><p>It is time, time for the final complication—well, of the introductory series anyway. Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model.</p> <span id="more-311"></span><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>How Beta Factors Work</h2><p>First thing is first, what does beta actually do? The basic idea is that we take the failure rate (lambda) for our equipment, and we split it into two pieces. Let&#8217;s take our level switch as an example, it has a lambda of 1e-6 failures/hour (high bound dangerous failure rate pulled from <a href="http://silsafedata.com/">SILSafeData</a>). Beta splits this failure rate into two pieces—a dependent piece and an independent piece—which must sum to the original failure rate:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DU} = \lambda_{I} + \lambda_{CC}</pre></div><p>Here λ<sub>I</sub> is the independent portion of lambda, and λ<sub>CC</sub> is the dependent portion—we use &#8220;CC&#8221; (for common cause) instead of &#8220;D&#8221; as the subscript to avoid confusion (&#8220;D&#8221; could mean either &#8220;dependent&#8221; or &#8220;dangerous&#8221;).</p><p>It is critically important to see that the failure rate of the device has not changed, all we have done is partition it. The device&#8217;s failure rate is taken as an empirically determined fact, and is a constant. Stated another way, what we have done is acknowledge that our device&#8217;s failure rate contains a mix of common cause failures and of independent failures, and have just split them out.</p><p>Enough dawdling, we still haven&#8217;t mentioned how beta enters into this picture. It is actually quite straightforward: beta describes the size of the common cause partition, like so:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DU} = \lambda_{I} + \lambda_{CC} = (1-\beta) \lambda_{DU}+\beta\lambda_{DU}</pre></div><p>As you can see above, (1-β) represents the independent fraction of the failures, and β represents the dependent fraction of the failures. This will all become clear with use, but first, some intuition.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>A Simple Example</h2><p>Forget about lambdas and betas for a moment. Assume we have two level switches, and that each one fails ten times per year. Also, lets say that the level switches are disjoint, i.e. it is physically impossible for them to fail at the same time—if you need a refresher, check out the <a href="https://silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/">Venn Diagrams</a> post.</p><h3>2oo2 Voting Disjoint</h3><p>Now, consider how a <a href="https://silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/">2oo2 arrangement</a> of these level switches behaves. Think through it, if the switches vote 2oo2, then if either one fails our safety function no longer works. Assume that if a switch fails our safety instrument function is out of commission for a full day. How many days per year is our SIF not functional? Well, since each level switch fails ten times a year, and it&#8217;s impossible for them to fail together (by assumption), then our SIF is down twenty days a year.</p><h3>1oo2 Voting Disjoint</h3><p>Consider the 1oo2 arrangement of these same level switches. The switches are still disjoint, both still fail ten times a year. Let&#8217;s think through the 1oo2 configuration: I only need one of the level switches to vote to trip for the SIF to trip. That means that as long as at least one of the switches is functional, the SIF is functional. Each level switch fails ten times a year, but they never fail together. Therefore, our SIF is never down! Clearly this is an unrealistic situation, but we are trying to illustrate a point.</p><p>Next, let&#8217;s walk through the above situations again, but allow the level switches to fail together. It doesn&#8217;t matter if the simultaneous failures are due to random chance or to common causes at the moment, just focus on the fact that they can fail at the same time. For the sake of simplicity, assume that one time per year the switches fail together (i.e. on the same day). Note that each level switch still fails ten times per year, this is critically important, all we are doing is saying that once a year those failures line up. So, for each switch, nine times a year it fails on its own, and one time each year in fails in conjunction with the other switch.</p><h3>2oo2 Voting Overlapping</h3><p>Step through the 2oo2 voting again: in a 2oo2 structure I need both devices to work. Therefore, if either (or both) devices fail, the SIF doesn&#8217;t work. How many days a year is our SIF down? Well, each level switch fails 9 times a year on it&#8217;s own, so that&#8217;s eighteen days. Then, once per year both switches fail on the same day, which brings the total to nineteen days our SIF is down each year.</p><p>This should strike you as strange! We allowed our level switches to fail simultaneously (i.e we made the model more realistic), and all of a sudden our SIF is down less days each year (in PFD terms we would say that our PFD average has gotten better). I am here to tell you that it is not strange, or counterintuitive, or really all that mysterious. It is just the result of sliding the circles around in our Venn Diagram (I like to call this the sliding disk model because I think it sounds cool). Check out the below diagram:</p><figure class="wp-block-image size-large is-style-default"><img  alt="Venn diagram disjoint events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image.png?w=1024" class="wp-image-340 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image.png?w=1024" alt="Venn diagram disjoint events" class="wp-image-340"/></noscript></figure><p>This is a model of the disjoint situation—level switches can&#8217;t physically fail at the same time. We can tell that because the circles don&#8217;t overlap (recall that the area of each circle represents how likely the device is to fail). Remember that to calculate the chance of failure for disjoint events, in a 2oo2 voting arrangement, we add the areas of the two circles—again, check the <a href="https://silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/">Venn diagram post</a> if you need the details. Keeping that in mind, take a look at a Venn Diagram of events that can happen together (overlapping events):</p><figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-1.png?w=1024" class="wp-image-342 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-1.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-342"/></noscript></figure><p>You&#8217;ll notice we have slid the disks together, creating an area of overlap. The procedure for finding the chances that an overlapping system fails, in a 2oo2 voting structure, is to add the areas of the circles, but then to subtract out the area of the intersection. This implies that the probability of failure for overlapping events, in a 2oo2 voting arrangement, will always be smaller than for the disjoint case! Why? Because we slid the circles together, and so the total space they occupy on the Venn Diagram is less. Mathematically we would state that:</p><div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>A+B-A \cap B&lt;A+B</pre></div><h3>1oo2 Voting Overlapping</h3><p>Finally, let&#8217;s revisit the 1oo2 voting arrangement while allowing the switches to fail together. A 1oo2 system implies that I only need one of the switches to vote to trip my safety function, so as long as I have one good switch I am okay. How many days a year am I down? Well, we just said both switches need to fail for the system to fail, and—per our assumptions—the switches only fail together 1 day per year. So, that means my safety function is only down one day per year.</p><p>Recall that, in the disjoint 1oo2 voting case, it was impossible for my safety function to ever fail. Once we allowed the switches to fail simultaneously (whether by chance or by common cause), we jumped from never to once per year!</p><h3>Summing it up</h3><p>To summarize, when we slide the disks together—which translates to allowing our devices to fail together—the PFD (probability of failure on demand) for voting structures involving unions (i.e 2oo2, 3oo3, MooM) goes down, because the total area is less. Voting structures involving intersections (1oo2, 1oo3, 1ooM) see their PFD go up, because the area of the intersection is increasing.</p><h3>The Sliding Disk Model</h3><p>Picture, in your mind&#8217;s eye, the two disks slowly coming together. The more that they overlap, the less total area they occupy on the Venn Diagram. This implies that the chances of the 2oo2 voting system failing are decreasing. Additionally, the more they come together, the larger the area of their intersection. This implies that the chances of the 1oo2 system failing are increasing. In the extreme case, where the events are perfectly correlated, the circles would overlap entirely. The series of stills below should help:</p><figure class="wp-block-image size-large is-style-default"><img  alt="Venn diagram disjoint events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-3.png?w=1024" class="wp-image-346 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-3.png?w=1024" alt="Venn diagram disjoint events" class="wp-image-346"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-4.png?w=1024" class="wp-image-348 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-4.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-348"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-5.png?w=1024" class="wp-image-350 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-5.png?w=1024" alt="" class="wp-image-350"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-6.png?w=1024" class="wp-image-352 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-6.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-352"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram perfectly correlated events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-2.png?w=1024" class="wp-image-344 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-2.png?w=1024" alt="Venn Diagram perfectly correlated events" class="wp-image-344"/></noscript></figure><h3>Perfectly Correlated Events</h3><p>In the above diagram, the area of the two disks is minimized, and thus the chances that the 2oo2 system fails are minimized. The area of the intersection is maximized, and so the chances of the 1oo2 system failing are maximized. In fact, in this case, the PFD for the 2oo2 and the 1oo2 system are identical!</p><p>Think through it with me, each level switch fails ten times per year. In the case of perfectly correlated events (the disks overlap entirely in the Venn Diagram), the level switches <em>always</em> fail together.  Examine the 2oo2 voting structure; I need both switches to work for the safety function to work. This implies that if either, or both, switches fail, the safety function fails. Since the switches always fail together, ten times per year, we can conclude that in the 2oo2 case our system is down ten days per year. In the 1oo2 arrangement we need both level switches to fail for our safety function to fail. Since we know that the switches fail simultaneously ten times per year, we conclude that the system is down ten days a year, same as the 2oo2 case!</p><div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div><h2>Big Picture</h2><p>Familiarizing yourself with the above examples will prove extremely helpful when it comes to practical applications. You will often hear people say things like &#8220;Don&#8217;t model beta in that 2oo2 SIF, but make sure you add beta to that 1oo2 SIF&#8221;. After reading through this post a couple of times, you should be able to understand why.</p><p>Modeling beta for a 2oo2 arrangement (or any MooM structure), causes the calculated PFD average to decrease, and so it&#8217;s typically not done in practice. It is important to understand that just because it is not done, does not mean that something is wrong with our model or our reasoning. We are not implying that our model does not accurately represent reality, we simply don&#8217;t model it this way in practice because it&#8217;s not conservative.</p><p>Conversely, we almost always model common cause failure with NooM arrangements in practice. This is because a) it represents reality, and b) it is conservative to do so, since modeling common cause increases the PFD average for such voting schemes.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>Important Technicality</h2><h3> All Or Nothing</h3><p>We need to point out a technicality of the beta factor model:</p><p>B<em>eta tells you the chances that <strong>all</strong> the devices fail together, and 1-β tells you the chances that a <strong>single</strong> device fails. </em></p><p>Read that very carefully while thinking about a complex system, say something with three devices. Notice that nowhere do we mention what the chances of any two devices failing together are, this is because beta does not model this!</p><p>The beta factor model is, by design, all or nothing. It partitions lambda into two pieces, one representing the failure rate of any single device, and one representing the failure rate of all devices due to common causes.</p><p>It&#8217;s important to remember that our models are not always perfect. Logically, we might expect that any common cause capable of failing all of our devices would have some bearing on the failure rates of say, two of our devices. Beta, however, simply does not account for this.</p><p><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/">Next time</a> we get to the good stuff, practical application of beta in our spreadsheet. See you then.</p></div><footer class="entry-footer"> <span class="cat-links"> Posted in <a href="https://www.silcalcblog.com/category/safety-instrumented-system/" rel="category tag">Safety Instrumented System</a>, <a href="https://www.silcalcblog.com/category/safety-integrity-level/" rel="category tag">safety integrity level</a>, <a href="https://www.silcalcblog.com/category/safety-integrity-level-calculation/" rel="category tag">Safety Integrity Level Calculation</a>, <a href="https://www.silcalcblog.com/category/sil-calc-101/" rel="category tag">SIL Calc 101</a> </span> <span class="tags-links"> <a href="https://www.silcalcblog.com/tag/beta/" rel="tag">Beta</a><a href="https://www.silcalcblog.com/tag/sil-calc/" rel="tag">SIL Calc</a> </span></footer><div class="entry-author"><div class="author-avatar"></div><div class="author-heading"><h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2></div><p class="author-bio"> <a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author"> View all posts by Ricardo Rivero </a></p></div></article><nav class="navigation post-navigation" role="navigation" aria-label="Posts"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Proof Testing</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="next"><span class="meta-nav">Next &rsaquo;</span>SIL Calcs 101: Beta Factor Application</a></div></div></nav><div id="comments" class="comments-area"><h2 class="comments-title"> 2 thoughts on &ldquo;<span>SIL Calcs 101: Beta Factor Intro</span>&rdquo;</h2><ol class="comment-list"><li id="comment-17" class="pingback even thread-even depth-1"><div class="comment-body"> Pingback: <a href='http://silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/' rel='external nofollow ugc' class='url'>SIL Calcs 101: Proof Testing &#8211; SilCalcBlog</a></div></li><li id="comment-18" class="pingback odd alt thread-odd thread-alt depth-1"><div class="comment-body"> Pingback: <a href='http://silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/' rel='external nofollow ugc' class='url'>SIL Calcs 101: Beta Factor Application &#8211; SilCalcBlog</a></div></li></ol><p class="no-comments">Comments are closed.</p></div></main></div></div><footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info-wrapper clear"><div class="site-info"> <a href="http://wordpress.org/">Proudly powered by WordPress</a> <span class="sep"> ~ </span> Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.</div></div></footer></div> <script>document.addEventListener("DOMContentLoaded", function() {
+	}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//localhost' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; SIL Calcs 101: Beta Factor Intro Comments Feed" href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.silcalcblog.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-reset-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/reset.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-block-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/blocks.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-192253365-1' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-192253365-1", {"anonymize_ip":true});
+</script>
+<link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/311" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 5.7" />
+<link rel='shortlink' href='https://www.silcalcblog.com/?p=311' />
+<link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F01%2F15%2Fsil-calcs-101-beta-factor-intro%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F01%2F15%2Fsil-calcs-101-beta-factor-intro%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.28.0" />		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="google-site-verification" content="gn9RsKsUPIOuqUTFouwEwGftyFf1280AmGUGhaQd7do" /></head>
+
+<body class="post-template-default single single-post postid-311 single-format-standard wp-embed-responsive no-sidebar">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+							<p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p>
+							<p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p>
+					</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg>
+				Menu			</button>
+			<div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li>
+<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-311" class="post-311 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-instrumented-system category-safety-integrity-level category-safety-integrity-level-calculation category-sil-calc-101 tag-beta tag-sil-calc">
+	<header class="entry-header">
+		<h1 class="entry-title">SIL Calcs 101: Beta Factor Intro</h1>					<div class="entry-thumbnail">
+				<img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript>			</div>
+		
+		<div class="entry-meta">
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="bookmark"><time class="entry-date published" datetime="2021-01-15T22:14:22+00:00">January 15, 2021</time><time class="updated" datetime="2021-03-15T00:51:17+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>It is time, time for the final complication—well, of the introductory series anyway. Beta factors give us the ability to model dependent events, and that is the piece we need to complete our model. </p>
+
+
+
+<span id="more-311"></span>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>How Beta Factors Work</h2>
+
+
+
+<p>First thing is first, what does beta actually do? The basic idea is that we take the failure rate (lambda) for our equipment, and we split it into two pieces. Let&#8217;s take our level switch as an example, it has a lambda of 1e-6 failures/hour (high bound dangerous failure rate pulled from <a href="http://silsafedata.com/">SILSafeData</a>). Beta splits this failure rate into two pieces—a dependent piece and an independent piece—which must sum to the original failure rate:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DU} = \lambda_{I} + \lambda_{CC}</pre></div>
+
+
+
+<p>Here λ<sub>I</sub> is the independent portion of lambda, and λ<sub>CC</sub> is the dependent portion—we use &#8220;CC&#8221; (for common cause) instead of &#8220;D&#8221; as the subscript to avoid confusion (&#8220;D&#8221; could mean either &#8220;dependent&#8221; or &#8220;dangerous&#8221;). </p>
+
+
+
+<p>It is critically important to see that the failure rate of the device has not changed, all we have done is partition it. The device&#8217;s failure rate is taken as an empirically determined fact, and is a constant. Stated another way, what we have done is acknowledge that our device&#8217;s failure rate contains a mix of common cause failures and of independent failures, and have just split them out. </p>
+
+
+
+<p>Enough dawdling, we still haven&#8217;t mentioned how beta enters into this picture. It is actually quite straightforward: beta describes the size of the common cause partition, like so:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\lambda_{DU} = \lambda_{I} + \lambda_{CC} = (1-\beta) \lambda_{DU}+\beta\lambda_{DU}</pre></div>
+
+
+
+<p>As you can see above, (1-β) represents the independent fraction of the failures, and β represents the dependent fraction of the failures. This will all become clear with use, but first, some intuition.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>A Simple Example</h2>
+
+
+
+<p>Forget about lambdas and betas for a moment. Assume we have two level switches, and that each one fails ten times per year. Also, lets say that the level switches are disjoint, i.e. it is physically impossible for them to fail at the same time—if you need a refresher, check out the <a href="https://silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/">Venn Diagrams</a> post. </p>
+
+
+
+<h3>2oo2 Voting Disjoint</h3>
+
+
+
+<p>Now, consider how a <a href="https://silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/">2oo2 arrangement</a> of these level switches behaves. Think through it, if the switches vote 2oo2, then if either one fails our safety function no longer works. Assume that if a switch fails our safety instrument function is out of commission for a full day. How many days per year is our SIF not functional? Well, since each level switch fails ten times a year, and it&#8217;s impossible for them to fail together (by assumption), then our SIF is down twenty days a year.</p>
+
+
+
+<h3>1oo2 Voting Disjoint</h3>
+
+
+
+<p>Consider the 1oo2 arrangement of these same level switches. The switches are still disjoint, both still fail ten times a year. Let&#8217;s think through the 1oo2 configuration: I only need one of the level switches to vote to trip for the SIF to trip. That means that as long as at least one of the switches is functional, the SIF is functional. Each level switch fails ten times a year, but they never fail together. Therefore, our SIF is never down! Clearly this is an unrealistic situation, but we are trying to illustrate a point.</p>
+
+
+
+<p>Next, let&#8217;s walk through the above situations again, but allow the level switches to fail together. It doesn&#8217;t matter if the simultaneous failures are due to random chance or to common causes at the moment, just focus on the fact that they can fail at the same time. For the sake of simplicity, assume that one time per year the switches fail together (i.e. on the same day). Note that each level switch still fails ten times per year, this is critically important, all we are doing is saying that once a year those failures line up. So, for each switch, nine times a year it fails on its own, and one time each year in fails in conjunction with the other switch. </p>
+
+
+
+<h3>2oo2 Voting Overlapping</h3>
+
+
+
+<p>Step through the 2oo2 voting again: in a 2oo2 structure I need both devices to work. Therefore, if either (or both) devices fail, the SIF doesn&#8217;t work. How many days a year is our SIF down? Well, each level switch fails 9 times a year on it&#8217;s own, so that&#8217;s eighteen days. Then, once per year both switches fail on the same day, which brings the total to nineteen days our SIF is down each year. </p>
+
+
+
+<p>This should strike you as strange! We allowed our level switches to fail simultaneously (i.e we made the model more realistic), and all of a sudden our SIF is down less days each year (in PFD terms we would say that our PFD average has gotten better). I am here to tell you that it is not strange, or counterintuitive, or really all that mysterious. It is just the result of sliding the circles around in our Venn Diagram (I like to call this the sliding disk model because I think it sounds cool). Check out the below diagram:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn diagram disjoint events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image.png?w=1024" class="wp-image-340 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image.png?w=1024" alt="Venn diagram disjoint events" class="wp-image-340"/></noscript></figure>
+
+
+
+<p>This is a model of the disjoint situation—level switches can&#8217;t physically fail at the same time. We can tell that because the circles don&#8217;t overlap (recall that the area of each circle represents how likely the device is to fail). Remember that to calculate the chance of failure for disjoint events, in a 2oo2 voting arrangement, we add the areas of the two circles—again, check the <a href="https://silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/">Venn diagram post</a> if you need the details. Keeping that in mind, take a look at a Venn Diagram of events that can happen together (overlapping events):</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-1.png?w=1024" class="wp-image-342 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-1.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-342"/></noscript></figure>
+
+
+
+<p>You&#8217;ll notice we have slid the disks together, creating an area of overlap. The procedure for finding the chances that an overlapping system fails, in a 2oo2 voting structure, is to add the areas of the circles, but then to subtract out the area of the intersection. This implies that the probability of failure for overlapping events, in a 2oo2 voting arrangement, will always be smaller than for the disjoint case! Why? Because we slid the circles together, and so the total space they occupy on the Venn Diagram is less. Mathematically we would state that:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>A+B-A \cap B&lt;A+B</pre></div>
+
+
+
+<h3>1oo2 Voting Overlapping</h3>
+
+
+
+<p>Finally, let&#8217;s revisit the 1oo2 voting arrangement while allowing the switches to fail together. A 1oo2 system implies that I only need one of the switches to vote to trip my safety function, so as long as I have one good switch I am okay. How many days a year am I down? Well, we just said both switches need to fail for the system to fail, and—per our assumptions—the switches only fail together 1 day per year. So, that means my safety function is only down one day per year. </p>
+
+
+
+<p>Recall that, in the disjoint 1oo2 voting case, it was impossible for my safety function to ever fail. Once we allowed the switches to fail simultaneously (whether by chance or by common cause), we jumped from never to once per year! </p>
+
+
+
+<h3>Summing it up</h3>
+
+
+
+<p>To summarize, when we slide the disks together—which translates to allowing our devices to fail together—the PFD (probability of failure on demand) for voting structures involving unions (i.e 2oo2, 3oo3, MooM) goes down, because the total area is less. Voting structures involving intersections (1oo2, 1oo3, 1ooM) see their PFD go up, because the area of the intersection is increasing.</p>
+
+
+
+<h3>The Sliding Disk Model</h3>
+
+
+
+<p>Picture, in your mind&#8217;s eye, the two disks slowly coming together. The more that they overlap, the less total area they occupy on the Venn Diagram. This implies that the chances of the 2oo2 voting system failing are decreasing. Additionally, the more they come together, the larger the area of their intersection. This implies that the chances of the 1oo2 system failing are increasing. In the extreme case, where the events are perfectly correlated, the circles would overlap entirely. The series of stills below should help:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn diagram disjoint events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-3.png?w=1024" class="wp-image-346 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-3.png?w=1024" alt="Venn diagram disjoint events" class="wp-image-346"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-4.png?w=1024" class="wp-image-348 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-4.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-348"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-5.png?w=1024" class="wp-image-350 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-5.png?w=1024" alt="" class="wp-image-350"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram overlapping events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-6.png?w=1024" class="wp-image-352 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-6.png?w=1024" alt="Venn Diagram overlapping events" class="wp-image-352"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="Venn Diagram perfectly correlated events"  data-src="https://silcalcblog.files.wordpress.com/2021/01/image-2.png?w=1024" class="wp-image-344 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/01/image-2.png?w=1024" alt="Venn Diagram perfectly correlated events" class="wp-image-344"/></noscript></figure>
+
+
+
+<h3>Perfectly Correlated Events</h3>
+
+
+
+<p>In the above diagram, the area of the two disks is minimized, and thus the chances that the 2oo2 system fails are minimized. The area of the intersection is maximized, and so the chances of the 1oo2 system failing are maximized. In fact, in this case, the PFD for the 2oo2 and the 1oo2 system are identical! </p>
+
+
+
+<p>Think through it with me, each level switch fails ten times per year. In the case of perfectly correlated events (the disks overlap entirely in the Venn Diagram), the level switches <em>always</em> fail together.  Examine the 2oo2 voting structure; I need both switches to work for the safety function to work. This implies that if either, or both, switches fail, the safety function fails. Since the switches always fail together, ten times per year, we can conclude that in the 2oo2 case our system is down ten days per year. In the 1oo2 arrangement we need both level switches to fail for our safety function to fail. Since we know that the switches fail simultaneously ten times per year, we conclude that the system is down ten days a year, same as the 2oo2 case!</p>
+
+
+
+<div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Big Picture</h2>
+
+
+
+<p>Familiarizing yourself with the above examples will prove extremely helpful when it comes to practical applications. You will often hear people say things like &#8220;Don&#8217;t model beta in that 2oo2 SIF, but make sure you add beta to that 1oo2 SIF&#8221;. After reading through this post a couple of times, you should be able to understand why. </p>
+
+
+
+<p>Modeling beta for a 2oo2 arrangement (or any MooM structure), causes the calculated PFD average to decrease, and so it&#8217;s typically not done in practice. It is important to understand that just because it is not done, does not mean that something is wrong with our model or our reasoning. We are not implying that our model does not accurately represent reality, we simply don&#8217;t model it this way in practice because it&#8217;s not conservative.</p>
+
+
+
+<p>Conversely, we almost always model common cause failure with NooM arrangements in practice. This is because a) it represents reality, and b) it is conservative to do so, since modeling common cause increases the PFD average for such voting schemes. </p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Important Technicality</h2>
+
+
+
+<h3> All Or Nothing</h3>
+
+
+
+<p>We need to point out a technicality of the beta factor model: </p>
+
+
+
+<p>B<em>eta tells you the chances that <strong>all</strong> the devices fail together, and 1-β tells you the chances that a <strong>single</strong> device fails. </em></p>
+
+
+
+<p>Read that very carefully while thinking about a complex system, say something with three devices. Notice that nowhere do we mention what the chances of any two devices failing together are, this is because beta does not model this!</p>
+
+
+
+<p>The beta factor model is, by design, all or nothing. It partitions lambda into two pieces, one representing the failure rate of any single device, and one representing the failure rate of all devices due to common causes. </p>
+
+
+
+<p>It&#8217;s important to remember that our models are not always perfect. Logically, we might expect that any common cause capable of failing all of our devices would have some bearing on the failure rates of say, two of our devices. Beta, however, simply does not account for this.</p>
+
+
+
+<p><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/">Next time</a> we get to the good stuff, practical application of beta in our spreadsheet. See you then. </p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+				<span class="cat-links">
+			Posted in <a href="https://www.silcalcblog.com/category/safety-instrumented-system/" rel="category tag">Safety Instrumented System</a>, <a href="https://www.silcalcblog.com/category/safety-integrity-level/" rel="category tag">safety integrity level</a>, <a href="https://www.silcalcblog.com/category/safety-integrity-level-calculation/" rel="category tag">Safety Integrity Level Calculation</a>, <a href="https://www.silcalcblog.com/category/sil-calc-101/" rel="category tag">SIL Calc 101</a>		</span>
+							<span class="tags-links">
+				<a href="https://www.silcalcblog.com/tag/beta/" rel="tag">Beta</a><a href="https://www.silcalcblog.com/tag/sil-calc/" rel="tag">SIL Calc</a>			</span>
+			</footer><!-- .entry-footer -->
+
+	
+<div class="entry-author">
+	<div class="author-avatar">
+			</div><!-- .author-avatar -->
+
+	<div class="author-heading">
+		<h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2>
+	</div><!-- .author-heading -->
+
+	<p class="author-bio">
+				<a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author">
+			View all posts by Ricardo Rivero		</a>
+	</p><!-- .author-bio -->
+</div><!-- .entry-auhtor -->
+</article><!-- #post-## -->
+
+			
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Proof Testing</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="next"><span class="meta-nav">Next &rsaquo;</span>SIL Calcs 101: Beta Factor Application</a></div></div>
+	</nav>
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			2 thoughts on &ldquo;<span>SIL Calcs 101: Beta Factor Intro</span>&rdquo;		</h2><!-- .comments-title -->
+
+		
+		<ol class="comment-list">
+					<li id="comment-17" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/' rel='external nofollow ugc' class='url'>SIL Calcs 101: Proof Testing &#8211; SilCalcBlog</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/' rel='external nofollow ugc' class='url'>SIL Calcs 101: Beta Factor Application &#8211; SilCalcBlog</a> 			</div>
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+			<p class="no-comments">Comments are closed.</p>
+	
+	
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info-wrapper clear">
+						<div class="site-info">
+				<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"> ~ </span>
+				Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.			</div><!-- .site-info -->
+		</div><!-- .site-info-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
                 const eles = document.querySelectorAll(".katex-eq");
                 for(let idx=0; idx < eles.length; idx++) {
                     const ele = eles[idx];
@@ -144,4 +551,14 @@
                         ele.textContent = n.message;
                     }
                 }
-            });</script> <script defer src="https://www.silcalcblog.com/wp-content/cache/autoptimize/js/autoptimize_337646344b585d910fff071754f20b17.js"></script></body></html>
+            });
+        </script>
+        <link rel='stylesheet' id='katex-css'  href='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.css?ver=5.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.3' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.js?ver=5.7' id='katex-js'></script>
+
+</body>
+</html>
