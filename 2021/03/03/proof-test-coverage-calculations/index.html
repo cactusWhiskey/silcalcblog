@@ -1,4 +1,33 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><link media="all" href="https://www.silcalcblog.com/wp-content/cache/autoptimize/css/autoptimize_c04658732e8980e088c2fa0ac44c1a7d.css" rel="stylesheet" /><title>Proof Test Coverage Calculations - SilCalcBlog</title><meta name="description" content="Proof Test Coverage calculations, with examples and a spreadsheet." /><link rel="canonical" href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="Proof Test Coverage Calculations - SilCalcBlog" /><meta property="og:description" content="Proof Test Coverage calculations, with examples and a spreadsheet." /><meta property="og:url" content="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" /><meta property="og:site_name" content="SilCalcBlog" /><meta property="article:published_time" content="2021-03-04T03:13:33+00:00" /><meta property="article:modified_time" content="2021-03-14T03:00:16+00:00" /><meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" /><meta property="og:image:width" content="611" /><meta property="og:image:height" content="300" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Ricardo Rivero"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="9 minutes"> <script type="application/ld+json" class="yoast-schema-graph">{
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Proof Test Coverage Calculations - SilCalcBlog</title>
+	<meta name="description" content="Proof Test Coverage calculations, with examples and a spreadsheet." />
+	<link rel="canonical" href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Proof Test Coverage Calculations - SilCalcBlog" />
+	<meta property="og:description" content="Proof Test Coverage calculations, with examples and a spreadsheet." />
+	<meta property="og:url" content="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" />
+	<meta property="og:site_name" content="SilCalcBlog" />
+	<meta property="article:published_time" content="2021-03-04T03:13:33+00:00" />
+	<meta property="article:modified_time" content="2021-03-14T03:00:16+00:00" />
+	<meta property="og:image" content="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" />
+	<meta property="og:image:width" content="611" />
+	<meta property="og:image:height" content="300" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Ricardo Rivero">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="9 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{
 	    "@context": "https://schema.org",
 	    "@graph": [
 	        {
@@ -125,4 +154,385 @@
 	            "name": "Ricardo Rivero"
 	        }
 	    ]
-	}</script> <link rel='dns-prefetch' href='//localhost' /><link rel='dns-prefetch' href='//fonts.googleapis.com' /><link rel='dns-prefetch' href='//s.w.org' /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" /><link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" /><link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' /> <script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script> <link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/494" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" /><meta name="generator" content="WordPress 5.7" /><link rel='shortlink' href='https://www.silcalcblog.com/?p=494' /><link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F03%2F03%2Fproof-test-coverage-calculations%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F03%2F03%2Fproof-test-coverage-calculations%2F&#038;format=xml" /> <script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script> </head><body class="post-template-default single single-post postid-494 single-format-standard wp-embed-responsive no-sidebar"><div id="page" class="hfeed site"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a><header id="masthead" class="site-header" role="banner"><div class="site-branding"><p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p><p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p></div><nav id="site-navigation" class="main-navigation" role="navigation"> <button class="menu-toggle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg> Menu </button><div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li><li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li><li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li><li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li></ul></div></nav></header><div id="content" class="site-content"><div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article id="post-494" class="post-494 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-instrumented-system tag-proof-testing"><header class="entry-header"><h1 class="entry-title">Proof Test Coverage Calculations</h1><div class="entry-thumbnail"> <img width="611" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" data-sizes="(max-width: 611px) 100vw, 611px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="611" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w" sizes="(max-width: 611px) 100vw, 611px" /></noscript></div><div class="entry-meta"> <span class="posted-on"><a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" rel="bookmark"><time class="entry-date published" datetime="2021-03-03T21:13:33+00:00">March 3, 2021</time><time class="updated" datetime="2021-03-14T03:00:16+00:00">March 14, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span></div></header><div class="entry-content"><p>Finally, it is time to talk about proof test coverage calcs! Recall that when we covered <a href="https://silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/">how to model proof testing</a>, we took the proof test coverage as an assumption, but no longer (kind of). Unfortunately it is still pretty difficult to get rid of assumptions, and there is a heavy reliance on vendor data, as we will see.</p> <span id="more-494"></span><div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div><h2>Single Components</h2><h3>Vendor &amp; Generic Data</h3><p>Figuring out the proof test coverage for a single component (an actuator, a valve, a level switch, etc.) is actually pretty easy, you just look it up. Let&#8217;s start with a valve, perhaps a <a href="https://www.neles.com/products/valves/ball-valves/jamesbury-ball-valves/jamesbury-full-port-flanged-ball-valve-series-9000/">Jamesbury 9000 series ball valve</a>. Typically, to evaluate the proof test coverage of a device, you&#8217;d like to have the safety manual and the safety certification for that product. Most likely you will need to ask the vendor for the latest copy of these materials, however, older copies are usually available online, so I am using that for this example.</p><p>The <a href="https://www.certipedia.com/fs-products/files/certificates/certificates_asi/2015/V/V_370_03_15/V_370_03_15_en_el.pdf">safety certification</a> we are using for the Jamesbury 9000 gives us the following info:</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-27.png?w=677" class="wp-image-502 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-27.png?w=677" alt="" class="wp-image-502"/></noscript></figure><p>From this we can read off our lambda (24 FITs), and our proof test coverage (85%). If 24 FITs seems a bit low to you (for comparison, the generic data low end for a ball valve is around 300 FITs, for valves that close on trip—see <a href="http://silsafedata.com/">SILSafeData</a>), then you might want to consider substituting generic data in. Note that SILSafeData won&#8217;t give you the proof test coverage for generic equipment, I think you need to buy their books for that. It would be nice if anything in the SIS world was free (except this blog of course, no charge there).</p><p>The <a href="https://valveproducts.neles.com/documents/jamesbury/SafetyManuals/en/10SM_5_9000_en.pdf">safety manual</a> for the valve tells us what we actually have to do as part of our proof test (to achieve the 85% coverage).</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-28.png?w=670" class="wp-image-504 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-28.png?w=670" alt="" class="wp-image-504"/></noscript></figure><p>Basically we have to stroke test the valve, and give it a visual inspection.</p><h3>Data Sources</h3><p>As is likely obvious from above, reliable data is the hardest part of determining the proof test coverage (and failure rate!) for a single component. You can trust the vendor certifications, you can pay for the generic data sets, or, if you are lucky, your organization may keep it&#8217;s own, internal data.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>Multiple Components</h2><p>Let&#8217;s stick with the vendor data in this example. The next step is to figure out how proof test coverage for multiple devices combine. After all, when we go out and stroke our valve, we aren&#8217;t just testing the valve, but also it&#8217;s actuator, positioner, solenoids, etc. We need a way to understand how a proof test (stroking a valve) effects an entire system of components.</p><p>I find that a concrete example is often useful, so assume our safety function shuts off fuel gas to a furnace. This is a fairly standard safety function out in industry. Our system consists of a <a href="https://www.neles.com/products/valves/ball-valves/jamesbury-ball-valves/jamesbury-full-port-flanged-ball-valve-series-9000/">Jamesbury 9000</a> series ball valve, <a href="https://www.neles.com/products/actuators/pneumatic-actuators/neles-pneumatic-cylinder-actuators-series-b1/">Neles B1J</a> actuator, and <a href="https://www.emerson.com/en-us/catalog/fisher-dvc6200-sis">Emerson DVC 6200</a>. Note that I am ignoring the sensors and logic solver, because they are not components that are involved in the proof test of the valve.</p><h3>Actuator</h3><p>We already covered the ball valve above; the actuator <a href="https://valveproducts.neles.com/documents/neles/SafetyManuals/en/10SM_B1_en.pdf">safety manual</a> and <a href="https://www.certipedia.com/fs-products/files/certificates/certificates_asi/2016/V/V_509_01_16/V_509_01_16_en_el.pdf">certificate</a> combine to furnish the following information (again, always obtain current documentation from your vendor, and then question it):</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-29.png?w=659" class="wp-image-508 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-29.png?w=659" alt="" class="wp-image-508"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-31.png?w=696" class="wp-image-511 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-31.png?w=696" alt="" class="wp-image-511"/></noscript></figure><p>Again, it&#8217;s worth noting that <a href="http://silsafedata.com/">generic data</a> puts the low bound on a pneumatic piston actuator failure rate at 120 FITs.</p><h3>Digital Valve Positioner</h3><p>The final element we will need is our DVC, which serves as the interface between the electrical and pneumatic signals. <a href="https://www.emerson.com/documents/automation/im-supplement-safety-manual-for-fieldvue-dvc6200-sis-digital-valve-controller-position-monitor-lcp200-local-control-panel-en-125602.pdf">Safety manual</a> and <a href="https://www.emerson.com/documents/automation/im-supplement-safety-manual-for-fieldvue-dvc6200-sis-digital-valve-controller-position-monitor-lcp200-local-control-panel-en-125602.pdf">certification</a> yield the following:</p><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-32.png?w=571" class="wp-image-513 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-32.png?w=571" alt="" class="wp-image-513"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-34.png?w=724" class="wp-image-515 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-34.png?w=724" alt="" class="wp-image-515"/></noscript></figure><p>Where DETT stands for de-energize to trip, which is a pretty common setup.</p><h3>Calculating Coverage</h3><p>Time for a new <a href="https://docs.google.com/spreadsheets/d/1nJtA2C-0M27X6uaZep5fesGuwh2AD88Gx836pQU76rA/edit?usp=sharing">spreadsheet</a>! Let&#8217;s start by getting all of our information put in; set up a sheet like so:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-44.png?w=615" class="wp-image-534 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-44.png?w=615" alt="proof test coverage spreadsheet" class="wp-image-534"/></noscript></figure><p>Now enter the FITs and proof test coverages from above:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-43.png?w=607" class="wp-image-533 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-43.png?w=607" alt="proof test coverage spreadsheet" class="wp-image-533"/></noscript></figure><p>Compute the failures detected by multiplying the failure rate (FITs) by the proof test coverage:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-42.png?w=588" class="wp-image-532 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-42.png?w=588" alt="proof test coverage spreadsheet" class="wp-image-532"/></noscript></figure><p>Filling that down we get:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-41.png?w=569" class="wp-image-531 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-41.png?w=569" alt="proof test coverage spreadsheet" class="wp-image-531"/></noscript></figure><p>Calculation of proof test coverage is done by dividing the failures detected (technically failure rate since we are in FITs = failures per billion hours) by the total failure rate:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-39.png?w=557" class="wp-image-528 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-39.png?w=557" alt="proof test coverage spreadsheet" class="wp-image-528"/></noscript></figure><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-40.png?w=611" class="wp-image-529 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-40.png?w=611" alt="proof test coverage spreadsheet" class="wp-image-529"/></noscript></figure><p>Notice that this isn&#8217;t a straight average of the proof test coverages of the individual components, it&#8217;s weighed by the number of failures. Components with high failure rates contribute more to the calculated proof test coverage than those with lower failure rates.</p><p>So, for the sake of argument, if I were to adjust the coverage on our ball valve to 99%, it doesn&#8217;t make that much difference to our overall PTC:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/03/image.png?w=556" class="wp-image-536 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/03/image.png?w=556" alt="proof test coverage spreadsheet" class="wp-image-536"/></noscript></figure><p>But, if I change the DVC to 99%, that makes a big difference:</p><figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/03/image-1.png?w=565" class="wp-image-538 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/03/image-1.png?w=565" alt="proof test coverage spreadsheet" class="wp-image-538"/></noscript></figure><p>The takeaway here isn&#8217;t that DVCs are more important to PTC than valves (again, scrutinize your vendor data. Based on my ten years experience as an instrument engineer, the valve is way more likely to have a covert failure than the dvc), its that whatever has the highest failure rate, makes the biggest difference.</p><div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div><h2>Improving Coverages</h2><p>What if your proof test goes above and beyond what the vendor says is required (to achieve their stated proof test coverage). Well, we are getting into the arena of engineering judgement here, so what follows is a mostly qualitative description, but hopefully it is still helpful.</p><h3>Case 1: You Buy New</h3><p>On one extreme, you could just throw the whole installation out and install all new components at every proof test interval. Costly, but you are pretty much guaranteeing you can claim 100% proof test coverage; everything is new, so logically you would start tracking failure rate from zero again.</p><h3>Case 2: You Overhaul Everything</h3><p>You pull the valve (or the sensor, or whatever) and all it&#8217;s accessories and send them to the shop for a complete overhaul. All gaskets, O-rings, and other soft goods get replaced, surfaces get machined and smoothed, the valve is stroke tested in the shop, timed, leak tested, linkages are cleaned up and repaired if required, etc.</p><p>Now what proof test coverage do we claim?</p><p>This is a judgement call, but typically something high, like 95%. You should review the performance of your device after it&#8217;s overhauled, dig into the components of the device that are repaired and those that are not, and make a decision.</p><h3>Case 3: Mixed Overhaul, Replacement &amp; Inline Tests</h3><p>Fairly straightforward here, if you replace it then you treat it as 100% proof test coverage, overhauled components treated as per case 2, inline tests treated as in our main example above. Plug the respective coverages into the sheet and compute the total coverage for the assembly.</p><h3>Case 4: Something In-between</h3><p>You&#8217;re not pulling and shopping the valve (or device, valves are just an easy example), but you&#8217;re still doing more than the vendor requires. Maybe you run a valve signature, leak test the valve inline, or perform some other type of inline repair or diagnostic.</p><p>Now what&#8217;s the coverage? This one is completely up to you, there are too many variables. How has the device performed in the past after similar inline repairs? Can you argue that the additional testing you are doing makes a measurable difference in the valve&#8217;s failure rate? Are you relying on the improved proof test coverage to pass your SIL calcs, or is it just gravy? (If it is, then maybe do the extra testing, but don&#8217;t take the credit for it)</p><div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div><p>That&#8217;s all I&#8217;ve got for now, next time we will talk <a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/">partial stroke testing coverage.</a></p></div><footer class="entry-footer"> <span class="cat-links"> Posted in <a href="https://www.silcalcblog.com/category/safety-instrumented-system/" rel="category tag">Safety Instrumented System</a> </span> <span class="tags-links"> <a href="https://www.silcalcblog.com/tag/proof-testing/" rel="tag">proof testing</a> </span></footer><div class="entry-author"><div class="author-avatar"></div><div class="author-heading"><h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2></div><p class="author-bio"> <a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author"> View all posts by Ricardo Rivero </a></p></div></article><nav class="navigation post-navigation" role="navigation" aria-label="Posts"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Beta Factor Application</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/" rel="next"><span class="meta-nav">Next &rsaquo;</span>Partial Stroke Testing</a></div></div></nav></main></div></div><footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info-wrapper clear"><div class="site-info"> <a href="http://wordpress.org/">Proudly powered by WordPress</a> <span class="sep"> ~ </span> Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.</div></div></footer></div> <script defer src="https://www.silcalcblog.com/wp-content/cache/autoptimize/js/autoptimize_d90faf4d1c81885caf0708fe0408f8ff.js"></script></body></html>
+	}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//localhost' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.silcalcblog.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-reset-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/reset.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-block-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/blocks.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-192253365-1' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-192253365-1", {"anonymize_ip":true});
+</script>
+<link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.silcalcblog.com/wp-json/wp/v2/posts/494" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 5.7" />
+<link rel='shortlink' href='https://www.silcalcblog.com/?p=494' />
+<link rel="alternate" type="application/json+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F03%2F03%2Fproof-test-coverage-calculations%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.silcalcblog.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A4092%2F2021%2F03%2F03%2Fproof-test-coverage-calculations%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.28.0" />		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="google-site-verification" content="gn9RsKsUPIOuqUTFouwEwGftyFf1280AmGUGhaQd7do" /></head>
+
+<body class="post-template-default single single-post postid-494 single-format-standard wp-embed-responsive no-sidebar">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+							<p class="site-title"><a href="https://www.silcalcblog.com/" rel="home">SilCalcBlog</a></p>
+							<p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p>
+					</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg>
+				Menu			</button>
+			<div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://www.silcalcblog.com/about/">About</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://www.silcalcblog.com/contact/">Contact</a></li>
+<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="https://www.silcalcblog.com/spreadsheets/">Spreadsheets</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-494" class="post-494 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-instrumented-system tag-proof-testing">
+	<header class="entry-header">
+		<h1 class="entry-title">Proof Test Coverage Calculations</h1>					<div class="entry-thumbnail">
+				<img width="611" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" data-sizes="(max-width: 611px) 100vw, 611px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="611" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w" sizes="(max-width: 611px) 100vw, 611px" /></noscript>			</div>
+		
+		<div class="entry-meta">
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" rel="bookmark"><time class="entry-date published" datetime="2021-03-03T21:13:33+00:00">March 3, 2021</time><time class="updated" datetime="2021-03-14T03:00:16+00:00">March 14, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>Finally, it is time to talk about proof test coverage calcs! Recall that when we covered <a href="https://silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/">how to model proof testing</a>, we took the proof test coverage as an assumption, but no longer (kind of). Unfortunately it is still pretty difficult to get rid of assumptions, and there is a heavy reliance on vendor data, as we will see. </p>
+
+
+
+<span id="more-494"></span>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Single Components</h2>
+
+
+
+<h3>Vendor &amp; Generic Data</h3>
+
+
+
+<p>Figuring out the proof test coverage for a single component (an actuator, a valve, a level switch, etc.) is actually pretty easy, you just look it up. Let&#8217;s start with a valve, perhaps a <a href="https://www.neles.com/products/valves/ball-valves/jamesbury-ball-valves/jamesbury-full-port-flanged-ball-valve-series-9000/">Jamesbury 9000 series ball valve</a>. Typically, to evaluate the proof test coverage of a device, you&#8217;d like to have the safety manual and the safety certification for that product. Most likely you will need to ask the vendor for the latest copy of these materials, however, older copies are usually available online, so I am using that for this example. </p>
+
+
+
+<p>The <a href="https://www.certipedia.com/fs-products/files/certificates/certificates_asi/2015/V/V_370_03_15/V_370_03_15_en_el.pdf">safety certification</a> we are using for the Jamesbury 9000 gives us the following info:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-27.png?w=677" class="wp-image-502 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-27.png?w=677" alt="" class="wp-image-502"/></noscript></figure>
+
+
+
+<p>From this we can read off our lambda (24 FITs), and our proof test coverage (85%). If 24 FITs seems a bit low to you (for comparison, the generic data low end for a ball valve is around 300 FITs, for valves that close on trip—see <a href="http://silsafedata.com/">SILSafeData</a>), then you might want to consider substituting generic data in. Note that SILSafeData won&#8217;t give you the proof test coverage for generic equipment, I think you need to buy their books for that. It would be nice if anything in the SIS world was free (except this blog of course, no charge there).</p>
+
+
+
+<p>The <a href="https://valveproducts.neles.com/documents/jamesbury/SafetyManuals/en/10SM_5_9000_en.pdf">safety manual</a> for the valve tells us what we actually have to do as part of our proof test (to achieve the 85% coverage).</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-28.png?w=670" class="wp-image-504 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-28.png?w=670" alt="" class="wp-image-504"/></noscript></figure>
+
+
+
+<p>Basically we have to stroke test the valve, and give it a visual inspection.</p>
+
+
+
+<h3>Data Sources</h3>
+
+
+
+<p>As is likely obvious from above, reliable data is the hardest part of determining the proof test coverage (and failure rate!) for a single component. You can trust the vendor certifications, you can pay for the generic data sets, or, if you are lucky, your organization may keep it&#8217;s own, internal data. </p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Multiple Components </h2>
+
+
+
+<p>Let&#8217;s stick with the vendor data in this example. The next step is to figure out how proof test coverage for multiple devices combine. After all, when we go out and stroke our valve, we aren&#8217;t just testing the valve, but also it&#8217;s actuator, positioner, solenoids, etc. We need a way to understand how a proof test (stroking a valve) effects an entire system of components. </p>
+
+
+
+<p>I find that a concrete example is often useful, so assume our safety function shuts off fuel gas to a furnace. This is a fairly standard safety function out in industry. Our system consists of a <a href="https://www.neles.com/products/valves/ball-valves/jamesbury-ball-valves/jamesbury-full-port-flanged-ball-valve-series-9000/">Jamesbury 9000</a> series ball valve, <a href="https://www.neles.com/products/actuators/pneumatic-actuators/neles-pneumatic-cylinder-actuators-series-b1/">Neles B1J</a> actuator, and <a href="https://www.emerson.com/en-us/catalog/fisher-dvc6200-sis">Emerson DVC 6200</a>. Note that I am ignoring the sensors and logic solver, because they are not components that are involved in the proof test of the valve. </p>
+
+
+
+<h3>Actuator</h3>
+
+
+
+<p>We already covered the ball valve above; the actuator <a href="https://valveproducts.neles.com/documents/neles/SafetyManuals/en/10SM_B1_en.pdf">safety manual</a> and <a href="https://www.certipedia.com/fs-products/files/certificates/certificates_asi/2016/V/V_509_01_16/V_509_01_16_en_el.pdf">certificate</a> combine to furnish the following information (again, always obtain current documentation from your vendor, and then question it):</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-29.png?w=659" class="wp-image-508 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-29.png?w=659" alt="" class="wp-image-508"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-31.png?w=696" class="wp-image-511 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-31.png?w=696" alt="" class="wp-image-511"/></noscript></figure>
+
+
+
+<p>Again, it&#8217;s worth noting that <a href="http://silsafedata.com/">generic data</a> puts the low bound on a pneumatic piston actuator failure rate at 120 FITs.</p>
+
+
+
+<h3>Digital Valve Positioner</h3>
+
+
+
+<p>The final element we will need is our DVC, which serves as the interface between the electrical and pneumatic signals. <a href="https://www.emerson.com/documents/automation/im-supplement-safety-manual-for-fieldvue-dvc6200-sis-digital-valve-controller-position-monitor-lcp200-local-control-panel-en-125602.pdf">Safety manual</a> and <a href="https://www.emerson.com/documents/automation/im-supplement-safety-manual-for-fieldvue-dvc6200-sis-digital-valve-controller-position-monitor-lcp200-local-control-panel-en-125602.pdf">certification</a> yield the following:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-32.png?w=571" class="wp-image-513 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-32.png?w=571" alt="" class="wp-image-513"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt=""  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-34.png?w=724" class="wp-image-515 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-34.png?w=724" alt="" class="wp-image-515"/></noscript></figure>
+
+
+
+<p>Where DETT stands for de-energize to trip, which is a pretty common setup. </p>
+
+
+
+<h3>Calculating Coverage</h3>
+
+
+
+<p>Time for a new <a href="https://docs.google.com/spreadsheets/d/1nJtA2C-0M27X6uaZep5fesGuwh2AD88Gx836pQU76rA/edit?usp=sharing">spreadsheet</a>! Let&#8217;s start by getting all of our information put in; set up a sheet like so:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-44.png?w=615" class="wp-image-534 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-44.png?w=615" alt="proof test coverage spreadsheet" class="wp-image-534"/></noscript></figure>
+
+
+
+<p>Now enter the FITs and proof test coverages from above:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-43.png?w=607" class="wp-image-533 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-43.png?w=607" alt="proof test coverage spreadsheet" class="wp-image-533"/></noscript></figure>
+
+
+
+<p>Compute the failures detected by multiplying the failure rate (FITs) by the proof test coverage:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-42.png?w=588" class="wp-image-532 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-42.png?w=588" alt="proof test coverage spreadsheet" class="wp-image-532"/></noscript></figure>
+
+
+
+<p>Filling that down we get:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-41.png?w=569" class="wp-image-531 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-41.png?w=569" alt="proof test coverage spreadsheet" class="wp-image-531"/></noscript></figure>
+
+
+
+<p>Calculation of proof test coverage is done by dividing the failures detected (technically failure rate since we are in FITs = failures per billion hours) by the total failure rate:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-39.png?w=557" class="wp-image-528 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-39.png?w=557" alt="proof test coverage spreadsheet" class="wp-image-528"/></noscript></figure>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/02/image-40.png?w=611" class="wp-image-529 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/02/image-40.png?w=611" alt="proof test coverage spreadsheet" class="wp-image-529"/></noscript></figure>
+
+
+
+<p>Notice that this isn&#8217;t a straight average of the proof test coverages of the individual components, it&#8217;s weighed by the number of failures. Components with high failure rates contribute more to the calculated proof test coverage than those with lower failure rates.</p>
+
+
+
+<p>So, for the sake of argument, if I were to adjust the coverage on our ball valve to 99%, it doesn&#8217;t make that much difference to our overall PTC:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/03/image.png?w=556" class="wp-image-536 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/03/image.png?w=556" alt="proof test coverage spreadsheet" class="wp-image-536"/></noscript></figure>
+
+
+
+<p>But, if I change the DVC to 99%, that makes a big difference:</p>
+
+
+
+<figure class="wp-block-image size-large is-style-default"><img  alt="proof test coverage spreadsheet"  data-src="https://silcalcblog.files.wordpress.com/2021/03/image-1.png?w=565" class="wp-image-538 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://silcalcblog.files.wordpress.com/2021/03/image-1.png?w=565" alt="proof test coverage spreadsheet" class="wp-image-538"/></noscript></figure>
+
+
+
+<p>The takeaway here isn&#8217;t that DVCs are more important to PTC than valves (again, scrutinize your vendor data. Based on my ten years experience as an instrument engineer, the valve is way more likely to have a covert failure than the dvc), its that whatever has the highest failure rate, makes the biggest difference.</p>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Improving Coverages</h2>
+
+
+
+<p>What if your proof test goes above and beyond what the vendor says is required (to achieve their stated proof test coverage). Well, we are getting into the arena of engineering judgement here, so what follows is a mostly qualitative description, but hopefully it is still helpful. </p>
+
+
+
+<h3>Case 1: You Buy New</h3>
+
+
+
+<p>On one extreme, you could just throw the whole installation out and install all new components at every proof test interval. Costly, but you are pretty much guaranteeing you can claim 100% proof test coverage; everything is new, so logically you would start tracking failure rate from zero again.</p>
+
+
+
+<h3>Case 2: You Overhaul Everything</h3>
+
+
+
+<p>You pull the valve (or the sensor, or whatever) and all it&#8217;s accessories and send them to the shop for a complete overhaul. All gaskets, O-rings, and other soft goods get replaced, surfaces get machined and smoothed, the valve is stroke tested in the shop, timed, leak tested, linkages are cleaned up and repaired if required, etc.</p>
+
+
+
+<p>Now what proof test coverage do we claim? </p>
+
+
+
+<p>This is a judgement call, but typically something high, like 95%. You should review the performance of your device after it&#8217;s overhauled, dig into the components of the device that are repaired and those that are not, and make a decision. </p>
+
+
+
+<h3>Case 3: Mixed Overhaul, Replacement &amp; Inline Tests </h3>
+
+
+
+<p>Fairly straightforward here, if you replace it then you treat it as 100% proof test coverage, overhauled components treated as per case 2, inline tests treated as in our main example above. Plug the respective coverages into the sheet and compute the total coverage for the assembly. </p>
+
+
+
+<h3>Case 4: Something In-between</h3>
+
+
+
+<p>You&#8217;re not pulling and shopping the valve (or device, valves are just an easy example), but you&#8217;re still doing more than the vendor requires. Maybe you run a valve signature, leak test the valve inline, or perform some other type of inline repair or diagnostic. </p>
+
+
+
+<p>Now what&#8217;s the coverage? This one is completely up to you, there are too many variables. How has the device performed in the past after similar inline repairs? Can you argue that the additional testing you are doing makes a measurable difference in the valve&#8217;s failure rate? Are you relying on the improved proof test coverage to pass your SIL calcs, or is it just gravy? (If it is, then maybe do the extra testing, but don&#8217;t take the credit for it)</p>
+
+
+
+<div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>That&#8217;s all I&#8217;ve got for now, next time we will talk <a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/">partial stroke testing coverage.</a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+				<span class="cat-links">
+			Posted in <a href="https://www.silcalcblog.com/category/safety-instrumented-system/" rel="category tag">Safety Instrumented System</a>		</span>
+							<span class="tags-links">
+				<a href="https://www.silcalcblog.com/tag/proof-testing/" rel="tag">proof testing</a>			</span>
+			</footer><!-- .entry-footer -->
+
+	
+<div class="entry-author">
+	<div class="author-avatar">
+			</div><!-- .author-avatar -->
+
+	<div class="author-heading">
+		<h2 class="author-title">Published by <span class="author-name">Ricardo Rivero</span></h2>
+	</div><!-- .author-heading -->
+
+	<p class="author-bio">
+				<a class="author-link" href="https://www.silcalcblog.com/author/ricardo-rivero/" rel="author">
+			View all posts by Ricardo Rivero		</a>
+	</p><!-- .author-bio -->
+</div><!-- .entry-auhtor -->
+</article><!-- #post-## -->
+
+			
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="prev"><span class="meta-nav">&lsaquo; Previous</span>SIL Calcs 101: Beta Factor Application</a></div><div class="nav-next"><a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/" rel="next"><span class="meta-nav">Next &rsaquo;</span>Partial Stroke Testing</a></div></div>
+	</nav>
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info-wrapper clear">
+						<div class="site-info">
+				<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"> ~ </span>
+				Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.			</div><!-- .site-info -->
+		</div><!-- .site-info-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.3' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
+
+</body>
+</html>
