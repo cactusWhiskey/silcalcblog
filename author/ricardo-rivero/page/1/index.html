@@ -7,7 +7,7 @@
 
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-	<!-- This site is optimized with the Yoast SEO plugin v16.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<!-- This site is optimized with the Yoast SEO plugin v16.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>SilCalcBlog - Practical and Theoretical Musings on Safety Integrity Level Calculations</title>
 	<meta name="description" content="Practical and Theoretical Musings on Safety Integrity Level Calculations" />
 	<link rel="canonical" href="https://www.silcalcblog.com/" />
@@ -86,10 +86,7 @@
 	                    "@type": "ListItem",
 	                    "position": 1,
 	                    "item": {
-	                        "@type": "WebPage",
-	                        "@id": "https://www.silcalcblog.com/",
-	                        "url": "https://www.silcalcblog.com/",
-	                        "name": "Home"
+	                        "@id": "https://www.silcalcblog.com/#webpage"
 	                    }
 	                }
 	            ]
@@ -105,11 +102,12 @@
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="https://www.silcalcblog.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="https://www.silcalcblog.com/comments/feed/" />
-<link rel='stylesheet' id='wp-block-library-css'  href='https://www.silcalcblog.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.silcalcblog.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.1' type='text/css' media='all' />
 <link rel='stylesheet' id='penscratch-2-reset-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/reset.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='penscratch-2-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7.1' type='text/css' media='all' />
 <link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='penscratch-2-block-style-css'  href='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/css/blocks.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='katex-css'  href='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.13.0/katex.min.css?ver=5.7.1' type='text/css' media='all' />
 <script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 <script type='text/javascript' src='https://www.silcalcblog.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-192253365-1' id='google_gtagjs-js' async></script>
@@ -120,8 +118,8 @@ gtag("set", "developer_id.dZTNiMT", true);
 gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 </script>
 <link rel="https://api.w.org/" href="https://www.silcalcblog.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.silcalcblog.com/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 5.7" />
-<meta name="generator" content="Site Kit by Google 1.28.0" />		<script>
+<meta name="generator" content="WordPress 5.7.1" />
+<meta name="generator" content="Site Kit by Google 1.31.0" />		<script>
 			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
 		</script>
 				<style>
@@ -136,7 +134,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 					</style>
 		<meta name="google-site-verification" content="gn9RsKsUPIOuqUTFouwEwGftyFf1280AmGUGhaQd7do" /></head>
 
-<body class="home blog wp-embed-responsive no-sidebar">
+<body class="home blog wp-embed-responsive group-blog no-sidebar">
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	<header id="masthead" class="site-header" role="banner">
@@ -164,17 +162,163 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 		
 						
 				
+<article id="post-708" class="post-708 post type-post status-publish format-standard has-post-thumbnail hentry category-theoretical">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2021/05/04/pfd-equation-derivation/" rel="bookmark">PFD Equation Derivation</a></h1>	</header><!-- .entry-header -->
+			<div class="entry-thumbnail">
+			<a href="https://www.silcalcblog.com/2021/05/04/pfd-equation-derivation/"><img width="575" height="165"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" data-sizes="(max-width: 575px) 100vw, 575px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="575" height="165" src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w" sizes="(max-width: 575px) 100vw, 575px" /></noscript></a>
+		</div>
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/05/04/pfd-equation-derivation/" rel="bookmark"><time class="entry-date published" datetime="2021-05-04T22:49:39+00:00">May 4, 2021</time><time class="updated" datetime="2021-05-04T22:49:40+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/admin/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+				<div class="entry-content">
+		
+<p>Time for a theoretical post; let&#8217;s derive the basic <a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/">PFD equation</a> we all know and love:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div>
+
+
+
+<p>There are a few ways to go about this, but I think the easiest will be to set up a two state system. Consider a system which can either be working, or failed:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img width="579" height="167"  alt=""  data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png 579w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07-300x87.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png" data-sizes="(max-width: 579px) 100vw, 579px" class="wp-image-722 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="579" height="167" src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png" alt="" class="wp-image-722" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png 579w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07-300x87.png 300w" sizes="(max-width: 579px) 100vw, 579px" /></noscript></figure></div>
+
+
+
+<p>Notice that we draw an arc from the working state (state one) to the failed state (state two). Let&#8217;s discuss this system a bit; we know that it&#8217;s working when we first put it in service (presumably we test it during commissioning). Therefore, we can confidently say that the probability of the system being in state one at time <em>t = 0</em> is one. We can also assert that the total probability of being in either state one or state two must be unity. Given this info, we can write:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_1(0) = 1 \newline
+P_2(0) = 0  \newline
+P_1(t) + P_2(t) = 1</pre></div>
+
+
+
+<p>It will be useful later on to have things in vector form, so lets go ahead and write the probability at time zero in vector form:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\vec{P}_0 =   \begin{bmatrix}1\\0 \end{bmatrix}</pre></div>
+
+
+
+<p>To finish describing the system we need to establish the rate at which we move from state one to state two. For now let&#8217;s just call it <em>&#8220;a&#8221;</em>, and assume that it is constant (i.e. the rate at which we transition from working to failed is not a function of time). &#8220;a&#8221; has units of 1/time.</p>
+
+
+
+<p>Our system now looks like so:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img width="575" height="165"  alt=""  data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" data-sizes="(max-width: 575px) 100vw, 575px" class="wp-image-723 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="575" height="165" src="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" alt="" class="wp-image-723" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, https://www.silcalcblog.com/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w" sizes="(max-width: 575px) 100vw, 575px" /></noscript></figure></div>
+
+
+
+<p>Notice that we are getting dangerously close to a differential equation here. We&#8217;ve established that the rate of change from state one to state two, per unit time, is <em>a. </em>If we let the time interval for <em>a </em> approach zero, we have the instantaneous rate at which transitions are made from state one to state two. When multiplied by the probability of being in state one, this gives the rate of change of the probability of being in state one. I.e. :</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{dP_1}{dt} = -aP_1</pre></div>
+
+
+
+<p>Note that P<sub>1 </sub>is still a function of time, I have just omitted that for clarity (i.e its P<sub>1</sub>(t)).</p>
+
+
+
+<p>Also note the negative sign on &#8220;a&#8221;, this is because &#8220;a&#8221; is the rate that we are are leaving state one.</p>
+
+
+
+<p>We can just solve this equation and be done with the derivation. Solving this equation gives us an expression for P<sub>1</sub>, and since P<sub>1</sub>+P<sub>2</sub> = 1, we can then quickly solve for P<sub>2</sub>, which is what we want (P<sub>2</sub> is the probability, as a function of time, that the system is failed).</p>
+
+
+
+<p>The solution is straightforward: notice that this is a first order differential equation, and so we expect the answer to involve an exponential. In words, the above differential equation says &#8220;give me a function whose derivative is &#8220;-a&#8221; times the original function&#8221;. We know this will just be an exponential with a factor of &#8220;-a&#8221; in it:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_1(t) = e^{-at}</pre></div>
+
+
+
+<p>You can quickly check that this is correct by taking the derivative:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{dP_1}{dt} = \frac{d(e^{-at})}{dt}=-ae^{-at}=-aP_1</pre></div>
+
+
+
+<p>P<sub>2</sub> is quickly computed:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_2(t) = 1-P_1(t) = 1-e^{-at}</pre></div>
+
+
+
+<p>And of course, &#8220;a&#8221; is clearly just our failure rate lambda. </p>
+
+
+
+<div style="height:45px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2>Additional Complications</h2>
+
+
+
+<p>Before we end this post, lets at least generalize the ideas above a bit.</p>
+
+
+
+<p>Notice that if we had more transitions either in or out of state one, then our differential equation would have more terms. In general, we can drop the transition rates into a matrix (coefficient matrix), and use the power of linear algebra to solve the resulting system of differential equations. We&#8217;ll cover more complicated systems another time, but for our simple system, with only one transition rate, the matrix looks like this:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>A =\begin{bmatrix} -a&amp;0\\a&amp;0 \end{bmatrix}</pre></div>
+
+
+
+<p>Here the matrix position (1,1) represents the total rate at which we are transitioning out of state one. The position (2,1) represents the rate at which we transition to state two from state one. (1,2) represents the rate at which we transition to state one from state two, and (2,2) is the total rate we are transitioning out of state two. Notice that each column sums to zero.</p>
+
+
+
+<p>Our system in vector form is then:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{d\vec{P}}{dt} = A\vec{P}</pre></div>
+
+
+
+<p>This is just a system of differential equations, and the solution is an exponential. This time the exponential is raised to the power of a matrix:</p>
+
+
+
+<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\vec{P}(t)=e^{At}\vec{P}(0)</pre></div>
+			</div><!-- .entry-content -->
+	</article><!-- #post-## -->
+
+			
+				
 <article id="post-572" class="post-572 post type-post status-publish format-standard has-post-thumbnail hentry category-safety-instrumented-system tag-proof-testing">
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/" rel="bookmark">Partial Stroke Testing</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/"><img width="656" height="300"   alt="" loading="lazy" data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/image-5-1-656x300.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/image-5-1-656x300.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/"><img width="656" height="300"   alt="" data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/image-5-1-656x300.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/image-5-1-656x300.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" /></noscript></a>
 		</div>
 				<div class="entry-meta">
-			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/" rel="bookmark"><time class="entry-date published" datetime="2021-03-13T04:04:14+00:00">March 13, 2021</time><time class="updated" datetime="2021-03-13T04:21:49+00:00">March 13, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/" rel="bookmark"><time class="entry-date published" datetime="2021-03-13T04:04:14+00:00">March 13, 2021</time><time class="updated" datetime="2021-05-04T22:50:30+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
 				<div class="entry-content">
 		
-<p>When we partial stroke test a valve, we move it a little bit (&lt;10%), and then put it back to it&#8217;s original position. The idea is to prove that the valve is functional, without interrupting the process. However, now we need to figure out how to adjust our proof test coverage to account for the partial stroke test.</p>
+<p>When we partial stroke test a valve, we move it a little bit (&lt;10%), then put it back to it&#8217;s original position. The idea is to prove that the valve is functional, without interrupting the process. However, we need to figure out how to adjust our proof test coverage to account for the partial stroke test.</p>
 
 
 
@@ -187,7 +331,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" rel="bookmark">Proof Test Coverage Calculations</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/"><img width="611" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" data-sizes="(max-width: 611px) 100vw, 611px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="611" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w" sizes="(max-width: 611px) 100vw, 611px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/"><img width="611" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" data-sizes="(max-width: 611px) 100vw, 611px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="611" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc.png 611w, https://www.silcalcblog.com/wp-content/uploads/2021/03/ptc-300x147.png 300w" sizes="(max-width: 611px) 100vw, 611px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/03/03/proof-test-coverage-calculations/" rel="bookmark"><time class="entry-date published" datetime="2021-03-03T21:13:33+00:00">March 3, 2021</time><time class="updated" datetime="2021-03-14T03:00:16+00:00">March 14, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -206,7 +350,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="bookmark">SIL Calcs 101: Beta Factor Application</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/"><img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/"><img width="656" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta1-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/01/31/sil-calcs-101-beta-factor-application/" rel="bookmark"><time class="entry-date published" datetime="2021-01-31T16:57:57+00:00">January 31, 2021</time><time class="updated" datetime="2021-03-15T01:46:07+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -233,7 +377,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="bookmark">SIL Calcs 101: Beta Factor Intro</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/"><img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/"><img width="656" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2.png 656w, https://www.silcalcblog.com/wp-content/uploads/2021/01/beta2-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2021/01/15/sil-calcs-101-beta-factor-intro/" rel="bookmark"><time class="entry-date published" datetime="2021-01-15T22:14:22+00:00">January 15, 2021</time><time class="updated" datetime="2021-03-15T00:51:17+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -252,7 +396,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="bookmark">SIL Calcs 101: Proof Testing</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/"><img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/"><img width="656" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/proof.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/proof-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/" rel="bookmark"><time class="entry-date published" datetime="2020-12-20T11:51:21+00:00">December 20, 2020</time><time class="updated" datetime="2021-03-15T00:57:33+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -271,7 +415,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/" rel="bookmark">SIL Calcs 101: Multiple Elements</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/"><img width="656" height="110"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple-300x50.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="110" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple-300x50.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/"><img width="656" height="110"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple-300x50.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="110" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/multiple-300x50.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/10/sil-calcs-101-multiple-elements/" rel="bookmark"><time class="entry-date published" datetime="2020-12-10T20:59:42+00:00">December 10, 2020</time><time class="updated" datetime="2021-03-15T01:01:52+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -290,10 +434,10 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/" rel="bookmark">SIL Calcs 101: Venn Diagrams Introduction</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/"><img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/"><img width="656" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/12/screenshot-2020-11-26-124654-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
-			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/" rel="bookmark"><time class="entry-date published" datetime="2020-12-04T15:18:00+00:00">December 4, 2020</time><time class="updated" datetime="2021-03-13T03:37:57+00:00">March 13, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/12/04/sil-calcs-101-venn-diagrams-introduction/" rel="bookmark"><time class="entry-date published" datetime="2020-12-04T15:18:00+00:00">December 4, 2020</time><time class="updated" datetime="2021-05-04T21:48:38+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
 				<div class="entry-content">
 		
 <p>Welcome back! Venn diagrams are the path to greatness, at least when it comes to basic SIL calcs—though who knows, maybe also in life.</p>
@@ -309,7 +453,7 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/" rel="bookmark">SIL Calcs 101: Single Element System</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/"><img width="501" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png 501w, https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5-300x180.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png" data-sizes="(max-width: 501px) 100vw, 501px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="501" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png 501w, https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5-300x180.png 300w" sizes="(max-width: 501px) 100vw, 501px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/"><img width="501" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png 501w, https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5-300x180.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png" data-sizes="(max-width: 501px) 100vw, 501px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="501" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5.png 501w, https://www.silcalcblog.com/wp-content/uploads/2020/11/image-5-300x180.png 300w" sizes="(max-width: 501px) 100vw, 501px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
 			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-single-element-system/" rel="bookmark"><time class="entry-date published" datetime="2020-11-22T19:22:07+00:00">November 22, 2020</time><time class="updated" datetime="2021-03-15T01:03:26+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
@@ -328,10 +472,10 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/" rel="bookmark">SIL Calcs 101: Intro</a></h1>	</header><!-- .entry-header -->
 			<div class="entry-thumbnail">
-			<a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/"><img width="656" height="300"   alt="" loading="lazy" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/11/intro-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" loading="lazy" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/11/intro-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
+			<a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/"><img width="656" height="300"   alt="" data-srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/11/intro-300x137.png 300w"  data-src="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png" data-sizes="(max-width: 656px) 100vw, 656px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="656" height="300" src="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="https://www.silcalcblog.com/wp-content/uploads/2020/11/intro.png 656w, https://www.silcalcblog.com/wp-content/uploads/2020/11/intro-300x137.png 300w" sizes="(max-width: 656px) 100vw, 656px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
-			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/" rel="bookmark"><time class="entry-date published" datetime="2020-11-22T17:34:51+00:00">November 22, 2020</time><time class="updated" datetime="2021-03-15T01:31:13+00:00">March 15, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+			<span class="posted-on"><a href="https://www.silcalcblog.com/2020/11/22/sil-calcs-101-intro/" rel="bookmark"><time class="entry-date published" datetime="2020-11-22T17:34:51+00:00">November 22, 2020</time><time class="updated" datetime="2021-05-04T22:52:16+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="https://www.silcalcblog.com/author/ricardo-rivero/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
 				<div class="entry-content">
 		
 <p>Welcome! This series of posts will attempt to demystify <a href="https://en.wikipedia.org/wiki/Safety_integrity_level">safety integrity level</a> calculations (SIL Calcs). The idea is to teach you how to do these calculations in an intuitive, and illustrative way, so that you can wrap your head around what is actually going on. We&#8217;ll be using a simple approach, simple enough to model in Excel. Note, however, that we will not be using the simplified equations (as commonly used when computing by hand), instead we are going to do the real thing.</p>
@@ -361,10 +505,11 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 </div><!-- #page -->
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const eles = document.querySelectorAll(".katex-eq");
+            function katexRender() {
+                const eles = document.querySelectorAll(".katex-eq:not(.katex-rendered)");
                 for(let idx=0; idx < eles.length; idx++) {
                     const ele = eles[idx];
+                    ele.classList.add("katex-rendered");
                     try {
                         katex.render(
                             ele.textContent,
@@ -379,14 +524,14 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
                         ele.textContent = n.message;
                     }
                 }
-            });
+            }
+            document.addEventListener("DOMContentLoaded", katexRender);
         </script>
-        <link rel='stylesheet' id='katex-css'  href='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.css?ver=5.7' type='text/css' media='all' />
-<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.3' id='smush-lazy-load-js'></script>
+        <script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.4' id='smush-lazy-load-js'></script>
 <script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
 <script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
 <script type='text/javascript' src='https://www.silcalcblog.com/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
-<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.12.0/katex.min.js?ver=5.7' id='katex-js'></script>
+<script type='text/javascript' src='https://www.silcalcblog.com/wp-content/plugins/katex/assets/katex-0.13.0/katex.min.js?ver=5.7.1' id='katex-js'></script>
 
 </body>
 </html>
