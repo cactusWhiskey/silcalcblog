@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Theoretical Archives - SilCalcBlog</title>
+	<link rel="canonical" href="http://localhost:4092/category/theoretical/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Theoretical Archives - SilCalcBlog" />
+	<meta property="og:url" content="http://localhost:4092/category/theoretical/" />
+	<meta property="og:site_name" content="SilCalcBlog" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{
+	    "@context": "https://schema.org",
+	    "@graph": [
+	        {
+	            "@type": [
+	                "Person",
+	                "Organization"
+	            ],
+	            "@id": "http://localhost:4092/#/schema/person/dc08a5e0006475eb3bbf4d3189fb41ce",
+	            "name": "Ricardo Rivero",
+	            "logo": {
+	                "@id": "http://localhost:4092/#personlogo"
+	            },
+	            "sameAs": [
+	                "http://localhost:3465"
+	            ]
+	        },
+	        {
+	            "@type": "WebSite",
+	            "@id": "http://localhost:4092/#website",
+	            "url": "http://localhost:4092/",
+	            "name": "SilCalcBlog",
+	            "description": "Practical and Theoretical Musings on Safety Integrity Level Calculations",
+	            "publisher": {
+	                "@id": "http://localhost:4092/#/schema/person/dc08a5e0006475eb3bbf4d3189fb41ce"
+	            },
+	            "potentialAction": [
+	                {
+	                    "@type": "SearchAction",
+	                    "target": "http://localhost:4092/?s={search_term_string}",
+	                    "query-input": "required name=search_term_string"
+	                }
+	            ],
+	            "inLanguage": "en-US"
+	        },
+	        {
+	            "@type": "CollectionPage",
+	            "@id": "http://localhost:4092/category/theoretical/#webpage",
+	            "url": "http://localhost:4092/category/theoretical/",
+	            "name": "Theoretical Archives - SilCalcBlog",
+	            "isPartOf": {
+	                "@id": "http://localhost:4092/#website"
+	            },
+	            "breadcrumb": {
+	                "@id": "http://localhost:4092/category/theoretical/#breadcrumb"
+	            },
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "ReadAction",
+	                    "target": [
+	                        "http://localhost:4092/category/theoretical/"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "BreadcrumbList",
+	            "@id": "http://localhost:4092/category/theoretical/#breadcrumb",
+	            "itemListElement": [
+	                {
+	                    "@type": "ListItem",
+	                    "position": 1,
+	                    "item": {
+	                        "@type": "WebPage",
+	                        "@id": "http://localhost:4092/",
+	                        "url": "http://localhost:4092/",
+	                        "name": "Home"
+	                    }
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 2,
+	                    "item": {
+	                        "@id": "http://localhost:4092/category/theoretical/#webpage"
+	                    }
+	                }
+	            ]
+	        }
+	    ]
+	}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//localhost' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Feed" href="http://localhost:4092/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Comments Feed" href="http://localhost:4092/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SilCalcBlog &raquo; Theoretical Category Feed" href="http://localhost:4092/category/theoretical/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://localhost:4092/wp-includes/css/dist/block-library/style.min.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-reset-css'  href='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/css/reset.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-style-css'  href='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/style.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='penscratch-2-block-style-css'  href='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/css/blocks.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='katex-css'  href='http://localhost:4092/wp-content/plugins/katex/assets/katex-0.13.0/katex.min.css?ver=5.7.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://localhost:4092/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-192253365-1' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-192253365-1", {"anonymize_ip":true});
+</script>
+<link rel="https://api.w.org/" href="http://localhost:4092/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost:4092/wp-json/wp/v2/categories/19" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:4092/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 5.7.1" />
+<meta name="generator" content="Site Kit by Google 1.31.0" />		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="google-site-verification" content="gn9RsKsUPIOuqUTFouwEwGftyFf1280AmGUGhaQd7do" /></head>
+
+<body class="archive category category-theoretical category-19 wp-embed-responsive group-blog no-sidebar">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+							<p class="site-title"><a href="http://localhost:4092/" rel="home">SilCalcBlog</a></p>
+							<p class="site-description">Practical and Theoretical Musings on Safety Integrity Level Calculations</p>
+					</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0" fill="none" width="16" height="16"/><g><path id="menu-icon" d="M0 14h16v-2H0v2zM0 2v2h16V2H0zm0 7h16V7H0v2z"/></g></svg>
+				Menu			</button>
+			<div class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://localhost:4092/about/">About</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://localhost:4092/contact/">Contact</a></li>
+<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="http://localhost:4092/spreadsheets/">Spreadsheets</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			<header class="page-header">
+				<h1 class="page-title">Category: <span>Theoretical</span></h1>			</header><!-- .page-header -->
+
+			
+				
+					
+<article id="post-708" class="post-708 post type-post status-publish format-standard has-post-thumbnail hentry category-theoretical">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/" rel="bookmark">PFD Equation Derivation</a></h1>	</header><!-- .entry-header -->
+			<div class="entry-thumbnail">
+			<a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/"><img width="575" height="165"   alt="" data-srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w"  data-src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" data-sizes="(max-width: 575px) 100vw, 575px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="575" height="165" src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w" sizes="(max-width: 575px) 100vw, 575px" /></noscript></a>
+		</div>
+				<div class="entry-meta">
+			<span class="posted-on"><a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/" rel="bookmark"><time class="entry-date published" datetime="2021-05-04T22:49:39+00:00">May 4, 2021</time><time class="updated" datetime="2021-05-04T23:10:06+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="http://localhost:4092/author/admin/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+				<div class="entry-content">
+		
+<p>Time for a theoretical post; let&#8217;s derive the basic <a href="http://localhost:4092/2020/11/22/sil-calcs-101-intro/">PFD equation</a> we all know and love:</p>
+
+
+
+ <a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/#more-708" class="more-link">Continue reading <span class="screen-reader-text">&#8220;PFD Equation Derivation&#8221;</span> <span class="meta-nav">&rarr;</span></a>			</div><!-- .entry-content -->
+	</article><!-- #post-## -->
+
+				
+				
+		
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info-wrapper clear">
+						<div class="site-info">
+				<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"> ~ </span>
+				Theme: Penscratch 2 by <a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>.			</div><!-- .site-info -->
+		</div><!-- .site-info-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://localhost:4092/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.4' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-content/plugins/katex/assets/katex-0.13.0/katex.min.js?ver=5.7.1' id='katex-js'></script>
+
+</body>
+</html>
