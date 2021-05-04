@@ -178,141 +178,14 @@ gtag("config", "UA-192253365-1", {"anonymize_ip":true});
 			<a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/"><img width="575" height="165"   alt="" data-srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w"  data-src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" data-sizes="(max-width: 575px) 100vw, 575px" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="575" height="165" src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" class="attachment-penscratch-2-featured size-penscratch-2-featured wp-post-image" alt="" srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w" sizes="(max-width: 575px) 100vw, 575px" /></noscript></a>
 		</div>
 				<div class="entry-meta">
-			<span class="posted-on"><a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/" rel="bookmark"><time class="entry-date published" datetime="2021-05-04T22:49:39+00:00">May 4, 2021</time><time class="updated" datetime="2021-05-04T22:49:40+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="http://localhost:4092/author/admin/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
+			<span class="posted-on"><a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/" rel="bookmark"><time class="entry-date published" datetime="2021-05-04T22:49:39+00:00">May 4, 2021</time><time class="updated" datetime="2021-05-04T23:10:06+00:00">May 4, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="sep"> ~ </span><a class="url fn n" href="http://localhost:4092/author/admin/">Ricardo Rivero</a></span></span>								</div><!-- .entry-meta -->
 				<div class="entry-content">
 		
 <p>Time for a theoretical post; let&#8217;s derive the basic <a href="http://localhost:4092/2020/11/22/sil-calcs-101-intro/">PFD equation</a> we all know and love:</p>
 
 
 
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>PFD = 1-e^{-\lambda t}</pre></div>
-
-
-
-<p>There are a few ways to go about this, but I think the easiest will be to set up a two state system. Consider a system which can either be working, or failed:</p>
-
-
-
-<div class="wp-block-image"><figure class="aligncenter size-large"><img width="579" height="167"  alt=""  data-srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png 579w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07-300x87.png 300w"  data-src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png" data-sizes="(max-width: 579px) 100vw, 579px" class="wp-image-722 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="579" height="167" src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png" alt="" class="wp-image-722" srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07.png 579w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-30-07-300x87.png 300w" sizes="(max-width: 579px) 100vw, 579px" /></noscript></figure></div>
-
-
-
-<p>Notice that we draw an arc from the working state (state one) to the failed state (state two). Let&#8217;s discuss this system a bit; we know that it&#8217;s working when we first put it in service (presumably we test it during commissioning). Therefore, we can confidently say that the probability of the system being in state one at time <em>t = 0</em> is one. We can also assert that the total probability of being in either state one or state two must be unity. Given this info, we can write:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_1(0) = 1 \newline
-P_2(0) = 0  \newline
-P_1(t) + P_2(t) = 1</pre></div>
-
-
-
-<p>It will be useful later on to have things in vector form, so lets go ahead and write the probability at time zero in vector form:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\vec{P}_0 =   \begin{bmatrix}1\\0 \end{bmatrix}</pre></div>
-
-
-
-<p>To finish describing the system we need to establish the rate at which we move from state one to state two. For now let&#8217;s just call it <em>&#8220;a&#8221;</em>, and assume that it is constant (i.e. the rate at which we transition from working to failed is not a function of time). &#8220;a&#8221; has units of 1/time.</p>
-
-
-
-<p>Our system now looks like so:</p>
-
-
-
-<div class="wp-block-image"><figure class="aligncenter size-large"><img width="575" height="165"  alt=""  data-srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w"  data-src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" data-sizes="(max-width: 575px) 100vw, 575px" class="wp-image-723 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="575" height="165" src="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png" alt="" class="wp-image-723" srcset="http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39.png 575w, http://localhost:4092/wp-content/uploads/2021/05/Screenshot-from-2021-05-04-17-31-39-300x86.png 300w" sizes="(max-width: 575px) 100vw, 575px" /></noscript></figure></div>
-
-
-
-<p>Notice that we are getting dangerously close to a differential equation here. We&#8217;ve established that the rate of change from state one to state two, per unit time, is <em>a. </em>If we let the time interval for <em>a </em> approach zero, we have the instantaneous rate at which transitions are made from state one to state two. When multiplied by the probability of being in state one, this gives the rate of change of the probability of being in state one. I.e. :</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{dP_1}{dt} = -aP_1</pre></div>
-
-
-
-<p>Note that P<sub>1 </sub>is still a function of time, I have just omitted that for clarity (i.e its P<sub>1</sub>(t)).</p>
-
-
-
-<p>Also note the negative sign on &#8220;a&#8221;, this is because &#8220;a&#8221; is the rate that we are are leaving state one.</p>
-
-
-
-<p>We can just solve this equation and be done with the derivation. Solving this equation gives us an expression for P<sub>1</sub>, and since P<sub>1</sub>+P<sub>2</sub> = 1, we can then quickly solve for P<sub>2</sub>, which is what we want (P<sub>2</sub> is the probability, as a function of time, that the system is failed).</p>
-
-
-
-<p>The solution is straightforward: notice that this is a first order differential equation, and so we expect the answer to involve an exponential. In words, the above differential equation says &#8220;give me a function whose derivative is &#8220;-a&#8221; times the original function&#8221;. We know this will just be an exponential with a factor of &#8220;-a&#8221; in it:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_1(t) = e^{-at}</pre></div>
-
-
-
-<p>You can quickly check that this is correct by taking the derivative:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{dP_1}{dt} = \frac{d(e^{-at})}{dt}=-ae^{-at}=-aP_1</pre></div>
-
-
-
-<p>P<sub>2</sub> is quickly computed:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>P_2(t) = 1-P_1(t) = 1-e^{-at}</pre></div>
-
-
-
-<p>And of course, &#8220;a&#8221; is clearly just our failure rate lambda. </p>
-
-
-
-<div style="height:45px" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h2>Additional Complications</h2>
-
-
-
-<p>Before we end this post, lets at least generalize the ideas above a bit.</p>
-
-
-
-<p>Notice that if we had more transitions either in or out of state one, then our differential equation would have more terms. In general, we can drop the transition rates into a matrix (coefficient matrix), and use the power of linear algebra to solve the resulting system of differential equations. We&#8217;ll cover more complicated systems another time, but for our simple system, with only one transition rate, the matrix looks like this:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>A =\begin{bmatrix} -a&amp;0\\a&amp;0 \end{bmatrix}</pre></div>
-
-
-
-<p>Here the matrix position (1,1) represents the total rate at which we are transitioning out of state one. The position (2,1) represents the rate at which we transition to state two from state one. (1,2) represents the rate at which we transition to state one from state two, and (2,2) is the total rate we are transitioning out of state two. Notice that each column sums to zero.</p>
-
-
-
-<p>Our system in vector form is then:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\frac{d\vec{P}}{dt} = A\vec{P}</pre></div>
-
-
-
-<p>This is just a system of differential equations, and the solution is an exponential. This time the exponential is raised to the power of a matrix:</p>
-
-
-
-<div class="wp-block-katex-display-block katex-eq" data-katex-display="true"><pre>\vec{P}(t)=e^{At}\vec{P}(0)</pre></div>
-			</div><!-- .entry-content -->
+ <a href="http://localhost:4092/2021/05/04/pfd-equation-derivation/#more-708" class="more-link">Continue reading <span class="screen-reader-text">&#8220;PFD Equation Derivation&#8221;</span> <span class="meta-nav">&rarr;</span></a>			</div><!-- .entry-content -->
 	</article><!-- #post-## -->
 
 				
@@ -335,30 +208,7 @@ P_1(t) + P_2(t) = 1</pre></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-        <script>
-            function katexRender() {
-                const eles = document.querySelectorAll(".katex-eq:not(.katex-rendered)");
-                for(let idx=0; idx < eles.length; idx++) {
-                    const ele = eles[idx];
-                    ele.classList.add("katex-rendered");
-                    try {
-                        katex.render(
-                            ele.textContent,
-                            ele,
-                            {
-                                displayMode: ele.getAttribute("data-katex-display") === 'true',
-                                throwOnError: false
-                            }
-                        );
-                    } catch(n) {
-                        ele.style.color="red";
-                        ele.textContent = n.message;
-                    }
-                }
-            }
-            document.addEventListener("DOMContentLoaded", katexRender);
-        </script>
-        <script type='text/javascript' src='http://localhost:4092/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.4' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='http://localhost:4092/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.4' id='smush-lazy-load-js'></script>
 <script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/navigation.js?ver=20120206' id='penscratch-2-navigation-js'></script>
 <script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/penscratch-2.js?ver=20170608' id='penscratch-2-scripts-js'></script>
 <script type='text/javascript' src='http://localhost:4092/wp-content/themes/penscratch-2-wpcom/js/skip-link-focus-fix.js?ver=20130115' id='penscratch-2-skip-link-focus-fix-js'></script>
