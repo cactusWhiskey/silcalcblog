@@ -50,6 +50,8 @@ author:
 menu:
   - title:             Blog
     url:               /blog/
+  - title:             Categories & Tags
+    url:               /categories_list
   - title:             Spreadsheets
     url:               /spreadsheets/
   - title:             About
@@ -294,7 +296,7 @@ collections:
 
   projects:
     permalink:         /projects/:path/
-    output:            true
+    output:            false
 
 
 # File inclusion/exclusion
