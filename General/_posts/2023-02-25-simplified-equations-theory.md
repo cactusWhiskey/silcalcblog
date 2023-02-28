@@ -100,7 +100,11 @@ As you can see, the error over six years jumps up to 18% (still conservative). A
 
 Showing that the error is conservative is relatively straightforward graphically, check out the below plot of the rare event approximation (blue) vs the exact equation (red). Here the y-axis is PFD and the x-axis is time. You can see the the approximation is an upper bound on the exact equation, and thus the approximated PFD will always be higher than the exact PFD.
 
-<iframe src="https://www.desmos.com/calculator/hh1ihe9byp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<img srcset="/assets/img/blog/simplified4.png 1252w"
+  sizes="(min-width: 800px) 50vw, 100vw"
+  src="/assets/img/blog/simplified4.png"
+  alt="simplified equations error analysis"
+  loading="lazy" vspace="40" >
 
 ## PFD Avg Simplified
 
