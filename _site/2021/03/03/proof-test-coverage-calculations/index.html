@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Proof Test Coverage Calculations | SilCalcBlog</title>
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:title" content="Proof Test Coverage Calculations" />
+<meta name="author" content="Ricardo Rivero" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Proof test coverage calculations" />
+<meta property="og:description" content="Proof test coverage calculations" />
+<link rel="canonical" href="http://localhost:4000/2021/03/03/proof-test-coverage-calculations/" />
+<meta property="og:url" content="http://localhost:4000/2021/03/03/proof-test-coverage-calculations/" />
+<meta property="og:site_name" content="SilCalcBlog" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/ptc0.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-03T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/ptc0.png" />
+<meta property="twitter:title" content="Proof Test Coverage Calculations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ricardo Rivero"},"dateModified":"2023-01-24T22:41:07-06:00","datePublished":"2021-03-03T00:00:00-06:00","description":"Proof test coverage calculations","headline":"Proof Test Coverage Calculations","image":{"srcset":{"611w":"/assets/img/blog/ptc0.png"},"url":"http://localhost:4000/assets/img/blog/ptc0.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2021/03/03/proof-test-coverage-calculations/"},"url":"http://localhost:4000/2021/03/03/proof-test-coverage-calculations/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="theme-color" content="rgb(156,175,136)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SilCalcBlog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="SilCalcBlog">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/2021/03/03/proof-test-coverage-calculations/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="SilCalcBlog" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.1.6.js" as="worker" id="_hrefSearch">
+
+  
+  <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_katexPreload">
+  <noscript><link rel="stylesheet" href="/assets/bower_components/katex/dist/katex.min.css"></noscript>
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._advertise = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2023-03-28T18:56:59-05:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(156,175,136);--dark-mode-body-bg: #2d2e2c;--dark-mode-border-color: #393b38}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+<!-- Add HTML tags here to be included in the head -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6L8Y0JGST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M6L8Y0JGST');
+</script>
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  !function(e,s){var d="light-mode",o="dark-mode",a=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(a=a<=e._sunrise||a>=e._sunset?o:d)==o?d:o,s.body.classList.add(a),s.body.classList.remove(e))}(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/2021/">2021</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/2021/03/">03</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/2021/03/03/">03</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>proof-test-coverage-calculations</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-2021-03-03-proof-test-coverage-calculations" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Proof Test Coverage Calculations
+
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        Posted in <a href="/blog/general/" class="flip-title">General</a> on <a href="/tag-proof-testing/" class="flip-title">Proof Testing</a>
+      </span>
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/ptc0.png"
+    srcset="/assets/img/blog/ptc0.png 611w"
+    
+  
+  alt="Proof Test Coverage Calculations
+"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Proof test coverage calculations
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>Finally, it is time to talk about proof test coverage calcs! Recall that when we covered how to <a href="https://www.silcalcblog.com/2020/12/20/sil-calcs-101-proof-testing/">model proof testing</a>, we took the proof test coverage as an assumption, but no longer (kind of).
+<!--more--></p>
+
+<p>Unfortunately it is still pretty difficult to get rid of assumptions, and there is a heavy reliance on vendor data, as we will see.</p>
+
+<h2 id="single-components">Single Components</h2>
+
+<h3 id="vendor--generic-data">Vendor &amp; Generic Data</h3>
+
+<p>Figuring out the proof test coverage for a single component (an actuator, a valve, a level switch, etc.) is actually pretty easy, you just look it up. Let’s start with a valve, perhaps a <a href="https://www.neles.com/products/valves/ball-valves/jamesbury-ball-valves/jamesbury-full-port-flanged-ball-valve-series-9000/">Jamesbury 9000 series ball valve</a>. Typically, to evaluate the proof test coverage of a device, you’d like to have the safety manual and the safety certification for that product. Most likely you will need to ask the vendor for the latest copy of these materials, however, older copies are usually available online, so I am using that for this example.</p>
+
+<p>The safety certification we are using for the Jamesbury 9000 gives us the following info:</p>
+
+<p><img srcset="/assets/img/blog/ptc1.webp 677w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc1.webp" alt="jamesbury 9000 safety cert" loading="lazy" vspace="40" /></p>
+
+<p>From this we can read off our lambda (24 FITs), and our proof test coverage (85%). If 24 FITs seems a bit low to you (for comparison, the generic data low end for a ball valve is around 300 FITs, for valves that close on trip—see <a href="http://silsafedata.com/">SILSafeData</a>), then you might want to consider substituting generic data in. Note that SILSafeData won’t give you the proof test coverage for generic equipment, I think you need to buy their books for that. It would be nice if anything in the SIS world was free (except this blog of course, no charge there).</p>
+
+<p>The <a href="https://valveproducts.neles.com/documents/jamesbury/SafetyManuals/en/10SM_5_9000_en.pdf">safety manual</a> for the valve tells us what we actually have to do as part of our proof test (to achieve the 85% coverage).</p>
+
+<p><img srcset="/assets/img/blog/ptc2.webp 670w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc2.webp" alt="jamesbury 9000 safety manual" loading="lazy" vspace="40" /></p>
+
+<p>Basically we have to stroke test the valve, and give it a visual inspection.</p>
+
+<h3 id="data-sources">Data Sources</h3>
+
+<p>As is likely obvious from above, reliable data is the hardest part of determining the proof test coverage (and failure rate!) for a single component. You can trust the vendor certifications, you can pay for the generic data sets, or, if you are lucky, your organization may keep it’s own, internal data.</p>
+
+<h2 id="multiple-components">Multiple Components</h2>
+
+<p>Let’s stick with the vendor data in this example. The next step is to figure out how proof test coverage for multiple devices combine. After all, when we go out and stroke our valve, we aren’t just testing the valve, but also it’s actuator, positioner, solenoids, etc. We need a way to understand how a proof test (stroking a valve) effects an entire system of components.</p>
+
+<p>I find that a concrete example is often useful, so assume our safety function shuts off fuel gas to a furnace. This is a fairly standard safety function out in industry. Our system consists of a Jamesbury 9000 series ball valve, Neles B1J actuator, and Emerson DVC 6200. Note that I am ignoring the sensors and logic solver, because they are not components that are involved in the proof test of the valve.</p>
+
+<h3 id="actuator">Actuator</h3>
+
+<p>We already covered the ball valve above; the actuator <a href="https://valveproducts.neles.com/documents/neles/SafetyManuals/en/10SM_B1_en.pdf">safety manual</a> and certificate combine to furnish the following information (again, always obtain current documentation from your vendor, and then question it):</p>
+
+<p><img srcset="/assets/img/blog/ptc3.webp 670w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc3.webp" alt="actuator proof test" loading="lazy" vspace="40" /></p>
+
+<p><img srcset="/assets/img/blog/ptc4.webp 696w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc4.webp" alt="actuator safety manual" loading="lazy" vspace="40" /></p>
+
+<p>Again, it’s worth noting that <a href="http://silsafedata.com/">generic data</a> puts the low bound on a pneumatic piston actuator failure rate at 120 FITs.</p>
+
+<h3 id="digital-valve-positioner">Digital Valve Positioner</h3>
+
+<p>The final element we will need is our DVC, which serves as the interface between the electrical and pneumatic signals. <a href="https://www.emerson.com/documents/automation/im-supplement-safety-manual-for-fieldvue-dvc6200-sis-digital-valve-controller-position-monitor-lcp200-local-control-panel-en-125602.pdf">Safety manual</a> and certification yield the following:</p>
+
+<p><img srcset="/assets/img/blog/ptc5.webp 571w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc5.webp" alt="DVC safety manual" loading="lazy" vspace="40" /></p>
+
+<p><img srcset="/assets/img/blog/ptc6.webp 615w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc6.webp" alt="DVC safety manual" loading="lazy" vspace="40" /></p>
+
+<p>Where DETT stands for de-energize to trip, which is a pretty common setup.</p>
+
+<h3 id="calculating-coverage">Calculating Coverage</h3>
+
+<p>Time for a new <a href="Time for a new spreadsheet! Let’s start by getting all of our information put in; set up a sheet like so:">spreadsheet</a>! Let’s start by getting all of our information put in; set up a sheet like so:</p>
+
+<p><img srcset="/assets/img/blog/ptc7.webp 607w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc7.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>Now enter the FITs and proof test coverages from above:</p>
+
+<p><img srcset="/assets/img/blog/ptc8.webp 588w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc8.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>Compute the failures detected by multiplying the failure rate (FITs) by the proof test coverage:</p>
+
+<p><img srcset="/assets/img/blog/ptc9.webp 569w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc9.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>Filling that down we get:</p>
+
+<p><img srcset="/assets/img/blog/ptc10.webp 557w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc10.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>Calculation of proof test coverage is done by dividing the failures detected (technically failure rate since we are in FITs = failures per billion hours) by the total failure rate:</p>
+
+<p><img srcset="/assets/img/blog/ptc11.webp 611w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc11.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p><img srcset="/assets/img/blog/ptc12.webp 556w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc12.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>Notice that this isn’t a straight average of the proof test coverages of the individual components, it’s weighed by the number of failures. Components with high failure rates contribute more to the calculated proof test coverage than those with lower failure rates.</p>
+
+<p>So, for the sake of argument, if I were to adjust the coverage on our ball valve to 99%, it doesn’t make that much difference to our overall PTC:</p>
+
+<p><img srcset="/assets/img/blog/ptc13.webp 556w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc13.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>But, if I change the DVC to 99%, that makes a big difference:</p>
+
+<p><img srcset="/assets/img/blog/ptc14.webp 556w" sizes="(min-width: 800px) 50vw, 100vw" src="/assets/img/blog/ptc14.webp" alt="proof test coverage spreadsheet" loading="lazy" vspace="40" /></p>
+
+<p>The takeaway here isn’t that DVCs are more important to PTC than valves, its that whatever has the highest failure rate, makes the biggest difference.</p>
+
+<h2 id="improving-coverages">Improving Coverages</h2>
+
+<p>What if your proof test goes above and beyond what the vendor says is required (to achieve their stated proof test coverage). Well, we are getting into the arena of engineering judgement here, so what follows is a mostly qualitative description, but hopefully it is still helpful.</p>
+
+<h3 id="case-1-you-buy-new">Case 1: You Buy New</h3>
+
+<p>On one extreme, you could just throw the whole installation out and install all new components at every proof test interval. Costly, but you are pretty much guaranteeing you can claim 100% proof test coverage; everything is new, so logically you would start tracking failure rate from zero again.</p>
+
+<h2 id="case-2-you-overhaul-everything">Case 2: You Overhaul Everything</h2>
+
+<p>You pull the valve (or the sensor, or whatever) and all it’s accessories and send them to the shop for a complete overhaul. All gaskets, O-rings, and other soft goods get replaced, surfaces get machined and smoothed, the valve is stroke tested in the shop, timed, leak tested, linkages are cleaned up and repaired if required, etc.</p>
+
+<p>Now what proof test coverage do we claim?</p>
+
+<p>This is a judgement call, but typically something high, like 95-100%. You should review the performance of your device after it’s overhauled, dig into the components of the device that are repaired and those that are not, and make a decision.</p>
+
+<h3 id="case-3-mixed-overhaul-replacement--inline-tests">Case 3: Mixed Overhaul, Replacement &amp; Inline Tests</h3>
+
+<p>Fairly straightforward here, if you replace it then you treat it as 100% proof test coverage, overhauled components treated as per case 2, inline tests treated as in our main example above. Plug the respective coverages into the sheet and compute the total coverage for the assembly.</p>
+
+<h3 id="case-4-something-in-between">Case 4: Something In-between</h3>
+
+<p>You’re not pulling and shopping the valve (or device, valves are just an easy example), but you’re still doing more than the vendor requires. Maybe you run a valve signature, leak test the valve inline, or perform some other type of inline repair or diagnostic.</p>
+
+<p>Now what’s the coverage? This one is completely up to you, there are too many variables. How has the device performed in the past after similar inline repairs? Can you argue that the additional testing you are doing makes a measurable difference in the valve’s failure rate? Are you relying on the improved proof test coverage to pass your SIL calcs, or is it just gravy? (If it is, then maybe do the extra testing, but don’t take the credit for it)</p>
+
+<p>That’s all I’ve got for now, <a href="https://www.silcalcblog.com/2021/03/13/partial-stroke-testing/">next time</a> we will talk partial stroke testing coverage.</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+    
+
+
+  <aside class="other-projects related mb0" role="complementary">  <h2>Related Posts</h2>  <div class="columns">          <div class="column column-1-2">                  <article class="project-card">  <a href="/2023/03/17/analytical-equations/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/pfd_avg.png"    srcset="/assets/img/blog/pfd_avg.png 2329w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Analytical PFD and PFD Avg Equations"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/2023/03/17/analytical-equations/" class="flip-title">Analytical PFD and PFD Avg Equations</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      Theoretical post about PFD equations derivation    </p>      <a class="fill-card no-hover" href="/2023/03/17/analytical-equations/" tabindex="-1"><span class="sr-only">Continue reading Analytical PFD and PFD Avg Equations</span></a></article>              </div>          <div class="column column-1-2">                  <article class="project-card">  <a href="/2023/02/25/simplified-equations-theory/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/simplified1.png"    srcset="/assets/img/blog/simplified1.png 1252w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Simplified Equations: 1oo1 Theory"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/2023/02/25/simplified-equations-theory/" class="flip-title">Simplified Equations: 1oo1 Theory</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      Theoretical post about simplified Equation equation derivation    </p>      <a class="fill-card no-hover" href="/2023/02/25/simplified-equations-theory/" tabindex="-1"><span class="sr-only">Continue reading Simplified Equations: 1oo1 Theory</span></a></article>              </div>      </div></aside>
+
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/2021/01/15/sil-calcs-101-beta-factor-intro/" class="flip-title"><span>SIL Calcs 101: Beta Factor Intro</span></a>  </li>          <li class="h4">  <a href="/2021/01/31/sil-calcs-101-beta-factor-application/" class="flip-title"><span>SIL Calcs 101: Beta Factor Application</span></a>  </li>          <li class="h4">  <a href="/2021/05/04/pfd-equation-derivation/" class="flip-title"><span>PFD Equation Derivation</span></a>  </li>      </ul></aside>
+
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2022. All rights reserved.
+</small></p>
+  
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg " style="background-color:rgb(156,175,136);"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">SilCalcBlog</h2></a>
+    
+    
+      <p class="">
+        
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/categories_list"
+          class="sidebar-nav-item "
+          
+        >
+          Categories & Tags
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/spreadsheets/"
+          class="sidebar-nav-item "
+          
+        >
+          Spreadsheets
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/cheatsheet/"
+          class="sidebar-nav-item "
+          
+        >
+          Cheatsheet
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:ricardo.fr.rivero@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/ricardo-rivero-03713549" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+</body>
+</html>
