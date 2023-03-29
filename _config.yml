@@ -54,6 +54,8 @@ menu:
     url:               /categories_list
   - title:             Spreadsheets
     url:               /spreadsheets/
+  - title:             Cheatsheet
+    url:               /cheatsheet/
   - title:             About
     url:               /about/
 

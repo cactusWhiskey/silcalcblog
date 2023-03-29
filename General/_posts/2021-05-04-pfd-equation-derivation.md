@@ -16,6 +16,8 @@ permalink: /2021/05/04/pfd-equation-derivation/
 tags:       [theoretical]
 ---
 
+*Edited 17March2023: Improved clarity and fixed typos.*
+
 Time for a theoretical post; let’s derive the basic PFD equation we all know and love:
 
 $$
@@ -39,7 +41,7 @@ Notice that we draw an arc from the working state (state one) to the failed stat
 $$
 \begin{align}
 P_1(0) = 1 \\
-P_2(0) = 0
+P_2(0) = 0 \\
 P_1(t) + P_2(t) = 1
 \end{align}
 $$
@@ -48,9 +50,11 @@ It will be useful later on to have things in vector form, so lets go ahead and w
 
 
 $$
-\begin{equation}
-\vec{P}_0 = \biggl[ \begin{array}{c} 1 \\ 1 \end{array} \biggr]
-\end{equation}
+\begin{align}
+\vec{P}(t) = \biggl[ \begin{array}{c} P_1(t) \\ P_2(t) \end{array} \biggr] \\ \\
+
+\vec{P}(0) = \biggl[ \begin{array}{c} 1 \\ 0 \end{array} \biggr]
+\end{align}
 $$
 
 To finish describing the system we need to establish the rate at which we move from state one to state two. For now let’s just call it “a”, and assume that it is constant (i.e. the rate at which we transition from working to failed is not a function of time). “a” has units of 1/time.

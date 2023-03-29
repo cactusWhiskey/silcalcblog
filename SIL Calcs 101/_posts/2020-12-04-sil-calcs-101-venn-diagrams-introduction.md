@@ -17,6 +17,7 @@ permalink: /2020/12/04/sil-calcs-101-venn-diagrams-introduction/
 
 ---
 
+*Edited 17March2023: Fixed error in 2oo2 entry on the logic table comments.*
 
 
 Welcome back! Venn diagrams are the path to greatness, at least when it
@@ -309,7 +310,7 @@ events. For this reason, the table below assumes independent events.
 |:----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------:|
 |    1oo1    |                                                                                  P<sub>A</sub>                                                                                 |   Single element system   |
 |    1oo2    |                                                                           P<sub>A</sub>P<sub>B</sub>                                                                           |       Both must fail      |
-|    2oo2    |                                                           P<sub>A</sub> + P<sub>B</sub> – P<sub>A</sub>P<sub>B</sub>                                                           |   Both devices must fail   |
+|    2oo2    |                                                           P<sub>A</sub> + P<sub>B</sub> – P<sub>A</sub>P<sub>B</sub>                                                           |   Either device fails   |
 |    1oo3    |                                                                     P<sub>A</sub>P<sub>B</sub>P<sub>C</sub>                                                                    |   All devices must fail   |
 |    2oo3    |                         P<sub>A</sub>P<sub>B</sub> + P<sub>A</sub>P<sub>C</sub> + P<sub>B</sub>P<sub>C</sub> – 2P<sub>A</sub>P<sub>B</sub>P<sub>C</sub>                        | Any two devices must fail |
 |    3oo3    | P<sub>A</sub> + P<sub>B</sub> + P<sub>C</sub> – P<sub>A</sub>P<sub>B</sub> – P<sub>A</sub>P<sub>C</sub> – P<sub>B</sub>P<sub>C</sub> + P<sub>A</sub>P<sub>B</sub>P<sub>C</sub> |      Any device fails     |

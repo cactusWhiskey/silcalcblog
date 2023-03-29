@@ -17,7 +17,7 @@ permalink: /2020/12/10/sil-calcs-101-multiple-elements/
 
 ---
 
-
+*Edited 17March2023: Fixed 2oo2 comment in table to say that either device fails*
 
 Let’s make a multiple element system, I can’t think of a better way to spend time. We’ve previously modeled a single level switch, now we will model two level switches!
 <!--more-->
@@ -29,8 +29,8 @@ Recall our table of formulas from the [Venn Diagram post](/2020/12/04/sil-calcs-
 | **Voting** |                                                                                   **Formula**                                                                                  |        **Comment**        |
 |:----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------:|
 |    1oo1    |                                                                                  P<sub>A</sub>                                                                                 |   Single element system   |
-|    1oo2    |                                                                           P<sub>A</sub>P<sub>B</sub>                                                                           |       Both must fail      |
-|    2oo2    |                                                           P<sub>A</sub> + P<sub>B</sub> – P<sub>A</sub>P<sub>B</sub>                                                           |   Both devices must fail   |
+|    1oo2    |                                                                           P<sub>A</sub>P<sub>B</sub>                                                                           |       Both devices fail  |
+|    2oo2    |                                                           P<sub>A</sub> + P<sub>B</sub> – P<sub>A</sub>P<sub>B</sub>                                                           |   Either device fails   |
 |    1oo3    |                                                                     P<sub>A</sub>P<sub>B</sub>P<sub>C</sub>                                                                    |   All devices must fail   |
 |    2oo3    |                         P<sub>A</sub>P<sub>B</sub> + P<sub>A</sub>P<sub>C</sub> + P<sub>B</sub>P<sub>C</sub> – 2P<sub>A</sub>P<sub>B</sub>P<sub>C</sub>                        | Any two devices must fail |
 |    3oo3    | P<sub>A</sub> + P<sub>B</sub> + P<sub>C</sub> – P<sub>A</sub>P<sub>B</sub> – P<sub>A</sub>P<sub>C</sub> – P<sub>B</sub>P<sub>C</sub> + P<sub>A</sub>P<sub>B</sub>P<sub>C</sub> |      Any device fails     |
