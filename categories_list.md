@@ -7,6 +7,7 @@ title: Category & Tag Listing
 
 * [General](/blog/general/)
 * [SIL Calcs 101](/blog/sil-calcs-101/)
+* [Simplified Equations](/blog/simplified-equations/)
 
 ## Tags
 
